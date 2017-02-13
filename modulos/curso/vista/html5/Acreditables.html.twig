@@ -1,0 +1,123 @@
+{% extends 'Curso.html.twig' %}
+
+{% block contenido %}
+
+<center><h2>Acreditables</h2></center>
+<div class="row">
+	<div class="col-md-12" style="margin-top:1%">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-7">
+			<div class="col-md-3 text-left">						
+					Codigo:  
+					<input type="text"class="form-control" id="codEstudiante" disabled="disabled">
+			</div>
+			<div class="col-md-9 text-left">
+					Estudiante:
+					<input type="text" class="estudiante ui-autocomplete-input form-control" id="estudiante" placeholder="Cedula/Nombre/Apellido" onkeyup="autocompletarEstudiante()">	
+				</label>		
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row ">
+<div class="col-md-12">
+
+	<div class="col-md-1">
+		<input type="hidden" value="0" id="codigoHAcreditable">
+	</div>
+
+	<div class="col-md-12" style="margin-top:3%">
+		<h2 class="text-center" style="margin-left:-0%">Edición</h2>
+		<br>
+		<div class="col-md-2 text-left" style="margin-top:-2.5%">
+			<label>
+				Código de Acreditación: <input id="codigo" type="text" class="form-control" disabled></input>
+			</label>		
+		</div>
+		<div class="col-md-2 text-left" style="margin-top:0%">
+			<label title="Unidad de Credito">
+				U.C:<input id="unidadCredito" type="text" class="form-control"></input>
+			</label>
+		</div>
+		<div class="col-md-3 text-left" >	
+			<label>	
+				<div id="pensumAcreditable">
+
+				</div>
+			</label>	
+		</div>
+		<div class="col-md-3 text-left" style="margin-top:-0%">
+			<label>
+				<div id="trayectoAcreditable">
+				</div>	
+			</label>	
+		</div>
+		<div class="col-md-2 text-left" style="margin-top:-2.5%">		
+			<label>	
+				Fecha de Acreditación: <input id="fecha" type="date" class="form-control date">
+			</label>
+		</div>
+		
+
+</div>	 
+	</div>	
+</div>
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6 text-center">
+		<label>	
+			Observaciones:
+		</label>
+		<textarea id="observacion" class="form-control" style=" resize: none;"></textarea>	
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6 text-center" style="margin-top:2%">
+		<button class="btn btn-danger" onclick="limpiarCamposAcreditable();">Limpiar</button>
+		<button class="btn btn-primary" onclick="limpiarTodosCamposAcreditable();">Nuevo</button>
+		<button class="btn btn-success" onclick="preGuardarAcreditable();">Guardar</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<fieldset class="scheduler-border-1">
+			<legend class="scheduler-border">Acreditadas</legend>
+			
+			<table class="table table-hover" id='tablaAcreditable' style='text-align:center;' >
+				<div class="text-right form-inline">
+
+	
+					<button type="button" name="nueva_acreditable" id="nueva_electiva" class="btn btn-primary" onclick="limpiarCamposAcreditable();"><span class="fa fa-plus" ></span></button>
+				
+					<div id="borrar_electiva" class="form-group ">
+						<button type="button" name="borrar_acreditable" class="btn btn-danger" onclick="crearConfirm('¿Estas de acuerdo en borrar esta acreditable?',
+						'borrarAcreditable()','Aceptar');"><span class="fa fa-times" ></span></button>
+					</div>								
+				</div>
+
+				<tr>
+				  <td>N°</td>
+				  <td>Codigo</td>
+				  <td>Pensum</td>
+				  <td>Trayecto</td>
+				  <td title="Unidad de Credito">U.C</td>
+				  <td>Fecha</td>
+				  <td>Descripcion</td>
+				</tr>
+
+				<tbody id="listarAcreditable">
+
+	       		</tbody>
+	       	</table>
+
+		</fieldset>
+	</div>
+</div>
+
+{% endblock %}

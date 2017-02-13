@@ -1,0 +1,122 @@
+
+**************************** Error n° 1799 *****************************
+codigo Error: 1799
+Mensaje error: 'FotoControlador' La accion lol no es valida
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/foto/FotoControlador.php
+Linea Error: 28
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(25): FotoControlador::manejarRequerimiento()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#3 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#4 {main}
+**************************** Error n° 1800 *****************************
+codigo Error: 1800
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SIGESAC-DESARROLLO/base/clases/vista/Vista.php
+Linea Error: 185
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 1801 *****************************
+codigo Error: 1801
+Mensaje error: Datos de autenticación incorrectos. Revise su usuario y password
+Archivo Error: /var/www/SIGESAC-DESARROLLO/base/clases/basededatos/Conexion.php
+Linea Error: 67
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/login/modelo/LoginServicio.php(50): Conexion::conectar()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('admin', '132')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 1802 *****************************
+codigo Error: 1802
+Mensaje error: NO tienes permiso para consultar un archivo.
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/foto/modelo/FotografiaServicio.php
+Linea Error: 191
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1803 *****************************
+codigo Error: 1803
+Mensaje error: SQLSTATE[42883]: Undefined function: 7 ERROR:  no existe la función aud.f_auditoria_sel(text[], text[], text[])
+LINE 1: select * from aud.f_auditoria_sel(string_to_array($1,','),
+                      ^
+HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/auditoria/modelo/AuditoriaServicio.php
+Linea Error: 69
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/modelo/AuditoriaServicio.php(69): PDOStatement->execute(Array)
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/AuditoriaControlador.php(78): AuditoriaServicio::listar(NULL, NULL, NULL)
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/AuditoriaControlador.php(48): AuditoriaControlador::listar()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(5): AuditoriaControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 1804 *****************************
+codigo Error: 1804
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 382
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 1805 *****************************
+codigo Error: 1805
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 382
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 1806 *****************************
+codigo Error: 1806
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 382
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 1807 *****************************
+codigo Error: 1807
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 382
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
+		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}

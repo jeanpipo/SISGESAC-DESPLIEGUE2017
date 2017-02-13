@@ -1,0 +1,61 @@
+
+**************************** Error n° 1793 *****************************
+codigo Error: 1793
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1794 *****************************
+codigo Error: 1794
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1795 *****************************
+codigo Error: 1795
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1796 *****************************
+codigo Error: 1796
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1797 *****************************
+codigo Error: 1797
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 1798 *****************************
+codigo Error: 1798
+Mensaje error: (PrincipalControlador) Módulo inválido: $modulo
+Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php
+Linea Error: 76
+Trayecto:
+		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once()
+		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
