@@ -56,7 +56,7 @@ $BODY$
 ALTER FUNCTION aud.f_NoBorrarEditarAuditoria()
   OWNER TO admin;
 
-select aud.f_NoBorrarEditarAuditoria();
+--select aud.f_NoBorrarEditarAuditoria();
 
  CREATE OR REPLACE FUNCTION aud.f_crearTgAuditoria (p_esquema text) returns void
    as $BODY$
@@ -77,7 +77,8 @@ $BODY$
   COST 100;
 ALTER FUNCTION aud.f_crearTgAuditoria (p_esquema text)
   OWNER TO admin;
-  
+
+  select aud.f_crearTgAuditoria ('sis');
 
  CREATE OR REPLACE FUNCTION aud.f_crearTgTablaAuditoria () returns void
    as $BODY$
@@ -194,7 +195,7 @@ CREATE OR REPLACE FUNCTION per.AgregarModuloAuditoria() returns void
 DECLARE
 
 BEGIN
-	select per.f_modulo_agregar('Auditoria', 'Gestion de la auditoria sobre las modificaciones en todas las tablas del esquema sis');
+	PERFORM per.f_modulo_agregar('Auditoria', 'Gestion de la auditoria sobre las modificaciones en todas las tablas del esquema sis');
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -210,18 +211,18 @@ DECLARE
 	codigoModulo integer;
 BEGIN
 	select codigo from per.t_modulo where nombre='Auditoria' into codigoModulo;
-	select per.f_accion_ins('AuditoriaAgregar', 'agregar en la tabla auditoria', codigoModulo);	
-	select per.f_accion_ins('AuditoriaListar', 'Permite Consultar la tabla Auditoria', codigoModulo);
+	PERFORM 'per.f_accion_ins(AuditoriaAgregar, agregar en la tabla auditoria, || codigoModulo || );';	
+	PERFORM 'per.f_accion_ins(AuditoriaListar, Permite Consultar la tabla Auditoria,  || codigoModulo || );';
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION aud.f_agregarPermmisoATodosUsuarios()
+ALTER FUNCTION per.AgregarAccionesAuditoria()
   OWNER TO admin;
 
 select per.AgregarAccionesAuditoria();
 
- CREATE OR REPLACE FUNCTION aud.f_agregarPermmisoATodosUsuarios () returns void
+ CREATE OR REPLACE FUNCTION aud.f_agregarPermisoATodosUsuarios () returns void
    as $BODY$
 DECLARE
 	r pg_user;
@@ -230,8 +231,10 @@ DECLARE
 	codInsertarAuditoria integer;
 	codListarAuditoria integer;
 BEGIN
+	
 	select codigo from per.t_accion where nombre='AuditoriaAgregar' into codInsertarAuditoria;
 	select codigo from per.t_accion where nombre='AuditoriaListar' into codListarAuditoria;
+	
 	
 	for r in SELECT usename FROM pg_user loop
 		execute 'grant insert on table aud.t_auditoria to ' || r.usename ||';';
@@ -241,9 +244,9 @@ BEGIN
 
 	for i in SELECT codigo FROM per.t_usuario loop
 		select max(cod_usuario) from per.t_acc_usuario where cod_accion in (codInsertarAuditoria,codListarAuditoria) and cod_usuario =i.codigo into x;
-		if(x is null) then
-			execute 'select per.f_usuario_usu_acc_insertar('  ||i.codigo || ',' || codInsertarAuditoria ||');';
-			execute 'select per.f_usuario_usu_acc_insertar('  ||i.codigo ||',' || codListarAuditoria ||');';	
+		if(x is not null) then
+			perform per.f_usuario_usu_acc_insertar(i.codigo , codInsertarAuditoria);
+			perform per.f_usuario_usu_acc_insertar(i.codigo ,  codListarAuditoria );	
 		end if;		
 	end loop;
 	
@@ -251,13 +254,13 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION aud.f_agregarPermmisoATodosUsuarios()
+ALTER FUNCTION aud.f_agregarPermisoATodosUsuarios()
   OWNER TO admin;
   
-  select aud.f_agregarPermmisoATodosUsuarios ();
+  select aud.f_agregarPermisoATodosUsuarios();
 
 --pg_dump postgres > postgres_db.sql
 
-  
+
 
   
