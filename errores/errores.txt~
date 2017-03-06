@@ -1,484 +1,521 @@
 
-**************************** Error n° 1799 *****************************
-codigo Error: 1799
-Mensaje error: 'FotoControlador' La accion lol no es valida
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/foto/FotoControlador.php
-Linea Error: 28
-Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(25): FotoControlador::manejarRequerimiento()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#3 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#4 {main}
-**************************** Error n° 1800 *****************************
-codigo Error: 1800
+**************************** Error n° 45 *****************************
+codigo Error: 45
 Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
-Archivo Error: /var/www/SIGESAC-DESARROLLO/base/clases/vista/Vista.php
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
 Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#5 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
 		#6 {main}
-**************************** Error n° 1801 *****************************
-codigo Error: 1801
-Mensaje error: Datos de autenticación incorrectos. Revise su usuario y password
-Archivo Error: /var/www/SIGESAC-DESARROLLO/base/clases/basededatos/Conexion.php
-Linea Error: 67
+**************************** Error n° 46 *****************************
+codigo Error: 46
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/login/modelo/LoginServicio.php(50): Conexion::conectar()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('admin', '132')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1802 *****************************
-codigo Error: 1802
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 47 *****************************
+codigo Error: 47
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1803 *****************************
-codigo Error: 1803
-Mensaje error: SQLSTATE[42883]: Undefined function: 7 ERROR:  no existe la función aud.f_auditoria_sel(text[], text[], text[])
-LINE 1: select * from aud.f_auditoria_sel(string_to_array($1,','),
-                      ^
-HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/auditoria/modelo/AuditoriaServicio.php
-Linea Error: 69
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 48 *****************************
+codigo Error: 48
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/modelo/AuditoriaServicio.php(69): PDOStatement->execute(Array)
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/AuditoriaControlador.php(78): AuditoriaServicio::listar(NULL, NULL, NULL)
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/auditoria/AuditoriaControlador.php(48): AuditoriaControlador::listar()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(5): AuditoriaControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1804 *****************************
-codigo Error: 1804
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 49 *****************************
+codigo Error: 49
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1805 *****************************
-codigo Error: 1805
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 50 *****************************
+codigo Error: 50
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1806 *****************************
-codigo Error: 1806
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 51 *****************************
+codigo Error: 51
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1807 *****************************
-codigo Error: 1807
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 52 *****************************
+codigo Error: 52
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SIGESAC-DESARROLLO/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SIGESAC-DESARROLLO/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SIGESAC-DESARROLLO/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SIGESA...')
-		#5 /var/www/SIGESAC-DESARROLLO/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SIGESAC-DESARROLLO/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1808 *****************************
-codigo Error: 1808
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 53 *****************************
+codigo Error: 53
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1809 *****************************
-codigo Error: 1809
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 54 *****************************
+codigo Error: 54
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1810 *****************************
-codigo Error: 1810
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 55 *****************************
+codigo Error: 55
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1811 *****************************
-codigo Error: 1811
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 56 *****************************
+codigo Error: 56
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1812 *****************************
-codigo Error: 1812
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 57 *****************************
+codigo Error: 57
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1813 *****************************
-codigo Error: 1813
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 58 *****************************
+codigo Error: 58
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1814 *****************************
-codigo Error: 1814
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 59 *****************************
+codigo Error: 59
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1815 *****************************
-codigo Error: 1815
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 60 *****************************
+codigo Error: 60
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1816 *****************************
-codigo Error: 1816
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 61 *****************************
+codigo Error: 61
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1817 *****************************
-codigo Error: 1817
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 62 *****************************
+codigo Error: 62
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1818 *****************************
-codigo Error: 1818
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 63 *****************************
+codigo Error: 63
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1819 *****************************
-codigo Error: 1819
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 64 *****************************
+codigo Error: 64
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1820 *****************************
-codigo Error: 1820
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 65 *****************************
+codigo Error: 65
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1821 *****************************
-codigo Error: 1821
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 66 *****************************
+codigo Error: 66
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1822 *****************************
-codigo Error: 1822
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 67 *****************************
+codigo Error: 67
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1823 *****************************
-codigo Error: 1823
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 68 *****************************
+codigo Error: 68
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1824 *****************************
-codigo Error: 1824
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 69 *****************************
+codigo Error: 69
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1825 *****************************
-codigo Error: 1825
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 70 *****************************
+codigo Error: 70
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1826 *****************************
-codigo Error: 1826
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 71 *****************************
+codigo Error: 71
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1827 *****************************
-codigo Error: 1827
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 72 *****************************
+codigo Error: 72
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1828 *****************************
-codigo Error: 1828
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 73 *****************************
+codigo Error: 73
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1829 *****************************
-codigo Error: 1829
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 74 *****************************
+codigo Error: 74
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1830 *****************************
-codigo Error: 1830
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 75 *****************************
+codigo Error: 75
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1831 *****************************
-codigo Error: 1831
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 76 *****************************
+codigo Error: 76
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1832 *****************************
-codigo Error: 1832
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 77 *****************************
+codigo Error: 77
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1833 *****************************
-codigo Error: 1833
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 78 *****************************
+codigo Error: 78
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1834 *****************************
-codigo Error: 1834
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 79 *****************************
+codigo Error: 79
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1835 *****************************
-codigo Error: 1835
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 80 *****************************
+codigo Error: 80
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1836 *****************************
-codigo Error: 1836
-Mensaje error: NO tienes permiso para consultar un archivo.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 191
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 81 *****************************
+codigo Error: 81
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#3 {main}
-**************************** Error n° 1837 *****************************
-codigo Error: 1837
-Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_archivo
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
-Linea Error: 183
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 82 *****************************
+codigo Error: 82
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php(183): PDOStatement->execute(Array)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#4 {main}
-**************************** Error n° 1838 *****************************
-codigo Error: 1838
-Mensaje error: SQLSTATE[42883]: Undefined function: 7 ERROR:  no existe la función aud.f_auditoria_sel(text[], text[], text[])
-LINE 1: select * from aud.f_auditoria_sel(string_to_array($1,','),
-                      ^
-HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/auditoria/modelo/AuditoriaServicio.php
-Linea Error: 69
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 83 *****************************
+codigo Error: 83
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/auditoria/modelo/AuditoriaServicio.php(69): PDOStatement->execute(Array)
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/auditoria/AuditoriaControlador.php(78): AuditoriaServicio::listar(NULL, NULL, NULL)
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/auditoria/AuditoriaControlador.php(48): AuditoriaControlador::listar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(5): AuditoriaControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1839 *****************************
-codigo Error: 1839
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}
+**************************** Error n° 84 *****************************
+codigo Error: 84
+Mensaje error: Ya esta posicion posee información, se recomienda cambiar el nombre de la posición:datos
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/base/clases/vista/Vista.php
+Linea Error: 185
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
-**************************** Error n° 1840 *****************************
-codigo Error: 1840
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
-Linea Error: 382
-Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(382): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#7 {main}
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(91): Vista::asignarDato('datos', Array)
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#6 {main}

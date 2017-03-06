@@ -63,7 +63,7 @@ ALTER FUNCTION aud.f_NoBorrarEditarAuditoria()
 DECLARE
 	r information_schema.tables;
 BEGIN
-	for r in SELECT * FROM information_schema.tables WHERE table_schema = p_esquema loop
+	for r in SELECT * FROM information_schema.tables WHERE table_schema = p_esquema AND table_type='BASE TABLE' loop
 		execute 'CREATE TRIGGER tg_auditoria_before BEFORE INSERT OR UPDATE OR DELETE ON ' || p_esquema || '.' || r.table_name ||
 			' FOR EACH ROW EXECUTE PROCEDURE aud.f_auditoria();';
 
