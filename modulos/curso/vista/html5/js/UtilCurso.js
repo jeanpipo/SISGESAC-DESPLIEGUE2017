@@ -1301,8 +1301,10 @@ if(obtenerGet('codigo') != null)
 	montarSelects();
 //}
 
-function montarSelectUsuario(){
+var codDoc = null;
 
+function montarSelectUsuario(){
+	
 	datos = datos[0];
 
 	if(datos.emp_inst != null){
@@ -1319,6 +1321,7 @@ function montarSelectUsuario(){
 
 	setTimeout(function(){
 		if(datos.emp_pensum != null){
+			codProf = emp_pensum;
 			$("#selPen").val(datos.emp_pensum);
 			$("#selPen").prop("disabled",true);
 			$(".selectpicker").selectpicker("refresh");
@@ -1426,7 +1429,9 @@ function succCargarNotas(data){
  */
 
 function succListarEstudiantesCargarNotas(data){
-
+	
+	console.log(datos);
+	
 	var est = data.estudiante;
 	var cad = "";
 	var cad2 = "";
@@ -1496,7 +1501,10 @@ function succListarEstudiantesCargarNotas(data){
 
 		cad += "</table>";
 
-		if(per.CurEstudianteModificar)
+		//alert(datos);
+		console.log(data.datoscurso);
+
+		if(per.CurEstudianteModificar && data.datocurso[0].cod_docente == datos[0].codigo)
 			cad += "<br><br><center><button class='btn btn-dark btn-xs' onclick='guardarNotas()'>Cargar Notas</button></center>";
 	}
 	else {
@@ -1906,6 +1914,7 @@ function succInscribirUC(data){
  */
 
 function succListarUniEstudiante(data){
+	alert("");
 	var dat = data.cursos;
 	var cad = "";
 	if(dat){
