@@ -1733,6 +1733,6 @@ function pdfEstudiantesNuevoIngresoNoInscrito(){
 */
 function errors(data){	
 	console.log(data);
-	alert(JSON.stringify(data));
+	//alert(JSON.stringify(data));
 	mostrarMensaje("Error de comunicación con el servidor.",2);
 }
