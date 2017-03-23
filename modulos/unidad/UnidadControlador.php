@@ -70,7 +70,7 @@
 				else if ($accion == 'agregarPrelacion')					
 					self::agregarPrelacion();
 				else if ($accion == 'ModificarPrelacion')				
-					self::ModificiarPrelacion();
+					self::ModificarPrelacion();
 				else if ($accion =='buscarPrelacion')
 					self::obtenerPrelacion();
 				else if ($accion =='eliminarPrelacion')
@@ -453,7 +453,7 @@
 			}
 		}
 		
-		public static function agregarPrelacionModificar(){
+		public static function ModificarPrelacion(){
 			try{
 				
 				$Prelacion=new Prelacion();
@@ -463,7 +463,7 @@
 				$Prelacion->asignarCodigoUniCurricular(PostGet::obtenerPostGet('cod_uni_curricular'));
 				$Prelacion->asignarCodigoUniCurPrelada(PostGet::obtenerPostGet('cod_uni_cur_prelada'));
 
-				$r=PrelacionServicio::agregarPrelacionModificar($Prelacion);
+				$r=PrelacionServicio::modificarPrelacionObject($Prelacion);
 
 				$mensaje="Prelacion Modificación Con Exito";
 				Vista::asignarDato('prelacion',$r);
@@ -489,7 +489,7 @@
 
 		public static function eliminarPrelacion(){
 			try{
-				$codigo=PostGet::obtenerPostGet('codigoPrelada');
+				$codigo=PostGet::obtenerPostGet('codigo');
 				$r=PrelacionServicio::eliminar($codigo);
 				$mensaje="Prelacion Eliminada";
 				Vista::asignarDato('prelacion',$r);
@@ -602,7 +602,7 @@
 				else
 					$trayecto = PostGet::obtenerPostGet('trayecto');			
 
-				$r=UniTraPensumServicio::modificarPrelacionParametro(PostGet::obtenerPostGet('codigo'),
+				$r=UniTraPensumServicio::modificarUniTraPenParametro(PostGet::obtenerPostGet('codigo'),
 					PostGet::obtenerPostGet('pensum'),
 					$trayecto,
 					PostGet::obtenerPostGet('codigoUnidad'),

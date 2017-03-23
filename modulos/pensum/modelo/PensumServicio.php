@@ -212,7 +212,6 @@ class PensumServicio
 			$ejecutar->bindParam(':min_can_elect',$pensum->obtenerMinCanElectiva(), PDO::PARAM_INT);
 			$ejecutar->bindParam(':min_cre_elect',$pensum->obtenerMinCreElectiva(), PDO::PARAM_INT);
 			$ejecutar->bindParam(':min_cre_obligat',$pensum->obtenerMinCreObligatorio(), PDO::PARAM_INT);
-			var_dump($pensum->obtenerFechaCreacion());
 			$ejecutar->bindParam(':fec_creac', $pensum->obtenerFechaCreacion() , PDO::PARAM_STR);
 
 			$ejecutar->setFetchMode(PDO::FETCH_ASSOC);
