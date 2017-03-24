@@ -1,5 +1,5 @@
 function err(data){
-	alert("err");
+	
 	console.log(data);
 }
 
@@ -537,6 +537,10 @@ function mensajeErrorDB(cadena,mensaje){
 	  var ViolacionCheke = data.search("23514");
 	  if(ViolacionCheke != -1){
 	  	mostrarMensaje("Violacion de una check_violation "+mensaje,2);
+	  }
+	   var ViolacionPrivilegios = data.search("42501"); 
+	  if(ViolacionPrivilegios != -1){
+	  	mostrarMensaje("Violacion de una Privilegios "+mensaje,2);
 	  }
 
 }

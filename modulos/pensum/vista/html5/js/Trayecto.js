@@ -245,6 +245,7 @@ function succEliminando(data){
 
 function errorEliminando(data){	
 	console.log(data.responseText);	
+	mensajeErrorDB(data, "Error Eliminado Trayecto consultar LOG")
 }
 
 function consultarPorPatron(){
@@ -341,4 +342,8 @@ function mensajeErrorDB(cadena,mensaje){
 	  	mostrarMensaje("Violacion de una check_violation "+mensaje,2);
 	  }
 
+	 var ViolacionPrivilegios = data.search("42501"); 
+	  if(ViolacionPrivilegios != -1){
+	  	mostrarMensaje("Violacion de una Privilegios "+mensaje,2);
+	  }
 }
