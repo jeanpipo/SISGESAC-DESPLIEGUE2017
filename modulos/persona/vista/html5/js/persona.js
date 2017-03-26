@@ -920,7 +920,11 @@ function mostrarPersona(){
 }
 
 function volverPersona(){
+
+	if(getVarsUrl().FEstado || getVarsUrl().Fbtn || getVarsUrl().FCampo )
 	window.location.href = 'index.php?m_modulo=persona&m_vista=Listar&m_formato=html5&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo+'&Fbtn='+getVarsUrl().Fbtn;
+	else 
+	window.location.href = "index.php?m_accion=listar&m_modulo=persona&m_vista=Listar&m_formato=html5";
 
 }
 
@@ -1726,6 +1730,10 @@ function pdfEstudiantesNuevoIngresoNoInscrito(){
 
 	window.open("index.php?m_modulo=persona&m_formato=pdf&m_vista=nuevoIngresoNoInscrito&m_accion=cargaArchivoNuevoIngreso&ruta="+$("#ruta").val());
 
+}
+
+function irAgregarPersona(){
+	window.location.href = "index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&accion=N&persona=-1";
 }
 
 /**

@@ -283,7 +283,6 @@ $BODY$
   COST 100;
 ALTER FUNCTION sis.f_extrarArchivo (p_ruta text, p_codigo int)
   OWNER TO admin;
-
 --pg_dump postgres > postgres_db.sql
 
 

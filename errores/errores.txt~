@@ -1,101 +1,967 @@
 
-**************************** Error n° 67 *****************************
-codigo Error: 67
-Mensaje error: No se puede eliminar la prelacion
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/unidad/modelo/UniTraPensumServicio.php
-Linea Error: 141
+**************************** Error n° 90 *****************************
+codigo Error: 90
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/unidad/UnidadControlador.php(668): UniTraPensumServicio::eliminar('32')
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/unidad/UnidadControlador.php(91): UnidadControlador::eliminarUniTraPen()
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(65): UnidadControlador::manejarRequerimiento()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#6 {main}
-**************************** Error n° 68 *****************************
-codigo Error: 68
-Mensaje error: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «t_trayecto» viola la llave foránea «cf_uni_tra_pensum__trayecto» en la tabla «t_uni_tra_pensum»
-DETAIL:  La llave (codigo)=(5) todavía es referida desde la tabla «t_uni_tra_pensum».
-CONTEXT:  sentencia SQL: «DELETE FROM sis.t_trayecto
-  WHERE t_trayecto.codigo = v_codigo»
-función PL/pgSQL sis.f_trayecto_eliminar(integer) en la línea 7 en sentencia SQL
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php
-Linea Error: 216
-Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php(216): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(177): TrayectoServicio::eliminar('5')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(64): TrayectoControlador::eliminar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(61): TrayectoControlador::manejarRequerimiento()
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
 		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
 		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
 		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
 		#7 {main}
-**************************** Error n° 69 *****************************
-codigo Error: 69
-Mensaje error: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «t_trayecto» viola la llave foránea «cf_uni_tra_pensum__trayecto» en la tabla «t_uni_tra_pensum»
-DETAIL:  La llave (codigo)=(5) todavía es referida desde la tabla «t_uni_tra_pensum».
-CONTEXT:  sentencia SQL: «DELETE FROM sis.t_trayecto
-  WHERE t_trayecto.codigo = v_codigo»
-función PL/pgSQL sis.f_trayecto_eliminar(integer) en la línea 7 en sentencia SQL
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php
-Linea Error: 216
+**************************** Error n° 91 *****************************
+codigo Error: 91
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php(216): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(177): TrayectoServicio::eliminar('5')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(64): TrayectoControlador::eliminar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(61): TrayectoControlador::manejarRequerimiento()
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
 		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
 		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
 		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
 		#7 {main}
-**************************** Error n° 70 *****************************
-codigo Error: 70
-Mensaje error: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «t_trayecto» viola la llave foránea «cf_uni_tra_pensum__trayecto» en la tabla «t_uni_tra_pensum»
-DETAIL:  La llave (codigo)=(5) todavía es referida desde la tabla «t_uni_tra_pensum».
-CONTEXT:  sentencia SQL: «DELETE FROM sis.t_trayecto
-  WHERE t_trayecto.codigo = v_codigo»
-función PL/pgSQL sis.f_trayecto_eliminar(integer) en la línea 7 en sentencia SQL
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php
-Linea Error: 216
+**************************** Error n° 92 *****************************
+codigo Error: 92
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php(216): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(177): TrayectoServicio::eliminar('5')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(64): TrayectoControlador::eliminar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(61): TrayectoControlador::manejarRequerimiento()
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
 		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
 		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
 		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
 		#7 {main}
-**************************** Error n° 71 *****************************
-codigo Error: 71
-Mensaje error: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «t_trayecto» viola la llave foránea «cf_uni_tra_pensum__trayecto» en la tabla «t_uni_tra_pensum»
-DETAIL:  La llave (codigo)=(5) todavía es referida desde la tabla «t_uni_tra_pensum».
-CONTEXT:  sentencia SQL: «DELETE FROM sis.t_trayecto
-  WHERE t_trayecto.codigo = v_codigo»
-función PL/pgSQL sis.f_trayecto_eliminar(integer) en la línea 7 en sentencia SQL
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php
-Linea Error: 216
+**************************** Error n° 93 *****************************
+codigo Error: 93
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php(216): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(177): TrayectoServicio::eliminar('5')
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(64): TrayectoControlador::eliminar()
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(61): TrayectoControlador::manejarRequerimiento()
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
 		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
 		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
 		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
 		#7 {main}
-**************************** Error n° 72 *****************************
-codigo Error: 72
-Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «ajajaja»
-Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php
-Linea Error: 101
+**************************** Error n° 94 *****************************
+codigo Error: 94
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
 Trayecto:
-		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/modelo/TrayectoServicio.php(101): PDOStatement->execute()
-		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(148): TrayectoServicio::agregarTrayectoObjetc(Object(Trayecto))
-		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(103): TrayectoControlador::agregar(Object(Trayecto))
-		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/trayecto/TrayectoControlador.php(54): TrayectoControlador::preAgreModif()
-		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(61): TrayectoControlador::manejarRequerimiento()
-		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
-		#6 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
-		#7 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
-		#8 {main}
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 95 *****************************
+codigo Error: 95
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 96 *****************************
+codigo Error: 96
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 97 *****************************
+codigo Error: 97
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 98 *****************************
+codigo Error: 98
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 99 *****************************
+codigo Error: 99
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 100 *****************************
+codigo Error: 100
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 101 *****************************
+codigo Error: 101
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 102 *****************************
+codigo Error: 102
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 103 *****************************
+codigo Error: 103
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 104 *****************************
+codigo Error: 104
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 105 *****************************
+codigo Error: 105
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 106 *****************************
+codigo Error: 106
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 107 *****************************
+codigo Error: 107
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 108 *****************************
+codigo Error: 108
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 109 *****************************
+codigo Error: 109
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 110 *****************************
+codigo Error: 110
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 111 *****************************
+codigo Error: 111
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 112 *****************************
+codigo Error: 112
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 113 *****************************
+codigo Error: 113
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 114 *****************************
+codigo Error: 114
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 115 *****************************
+codigo Error: 115
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 116 *****************************
+codigo Error: 116
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 117 *****************************
+codigo Error: 117
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 118 *****************************
+codigo Error: 118
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 119 *****************************
+codigo Error: 119
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 120 *****************************
+codigo Error: 120
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 121 *****************************
+codigo Error: 121
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 122 *****************************
+codigo Error: 122
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 123 *****************************
+codigo Error: 123
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 124 *****************************
+codigo Error: 124
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 125 *****************************
+codigo Error: 125
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 126 *****************************
+codigo Error: 126
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 127 *****************************
+codigo Error: 127
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 128 *****************************
+codigo Error: 128
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 129 *****************************
+codigo Error: 129
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 130 *****************************
+codigo Error: 130
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 131 *****************************
+codigo Error: 131
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 132 *****************************
+codigo Error: 132
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 133 *****************************
+codigo Error: 133
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 134 *****************************
+codigo Error: 134
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 135 *****************************
+codigo Error: 135
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 136 *****************************
+codigo Error: 136
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 137 *****************************
+codigo Error: 137
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 138 *****************************
+codigo Error: 138
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 139 *****************************
+codigo Error: 139
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 140 *****************************
+codigo Error: 140
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 141 *****************************
+codigo Error: 141
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 142 *****************************
+codigo Error: 142
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 143 *****************************
+codigo Error: 143
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 144 *****************************
+codigo Error: 144
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 145 *****************************
+codigo Error: 145
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 146 *****************************
+codigo Error: 146
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 147 *****************************
+codigo Error: 147
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 148 *****************************
+codigo Error: 148
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 149 *****************************
+codigo Error: 149
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 150 *****************************
+codigo Error: 150
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 151 *****************************
+codigo Error: 151
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 152 *****************************
+codigo Error: 152
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(104): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/empleado/EmpleadoControlador.php(34): EmpleadoControlador::listar()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(13): EmpleadoControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 153 *****************************
+codigo Error: 153
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 154 *****************************
+codigo Error: 154
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 155 *****************************
+codigo Error: 155
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 156 *****************************
+codigo Error: 156
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 157 *****************************
+codigo Error: 157
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 158 *****************************
+codigo Error: 158
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/SISGES...')
+		#5 /var/www/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
