@@ -373,12 +373,12 @@ function succAgregarPeriodoD(data){
 
 	cad += "<center>";
 
-	cad += "Código del Periodo: <input type='text' size='4' id='codPeriodo' disabled>";
+	cad += "Código del Período: <input type='text' size='4' id='codPeriodo' disabled>";
 
 	cad += "<br>";
 	cad += "<br>";
 
-	cad += "Nombre del Periodo: <br><input type='text' id='nombreP' value=''>";
+	cad += "Nombre del Período: <br><input type='text' id='nombreP' value=''>";
 
 	cad += "<br>";
 	cad += "<br>";
@@ -411,7 +411,7 @@ function succAgregarPeriodoD(data){
 
 	len = est.length;
 
-	cad += "Estado del Periodo:";
+	cad += "Estado del Período:";
 
 	cad += "<br>";
 
@@ -438,7 +438,7 @@ function succAgregarPeriodoD(data){
 	cad += "<br>";
 	cad += "<br>";
 
-	crearDialogo("dialogoPerAgregar", "Agregar Periodo",'Nuevo Periodo', 1, "agregarPeriodo()",'Aceptar',true);
+	crearDialogo("dialogoPerAgregar", "Agregar Período",'Nuevo Período', 1, "agregarPeriodo()",'Aceptar',true);
 
 	$(".modal-body").append(cad);
 
@@ -462,11 +462,11 @@ function agregarPeriodo(){
 
 function succAgregarPeriodo(data){
 	if(data.codPeriodo > 0){
-		mostrarMensaje("El periodo se ha agregado exitosamente con el código "+data.codPeriodo+".",1);
+		mostrarMensaje("El período se ha agregado exitosamente con el código "+data.codPeriodo+".",1);
 		$("#dialogoPerAgregar").modal('hide');
 		cargarPeriodosP();
 	}
 	else{
-		mostrarMensaje("El periodo no se pudo agregar.",2);
+		mostrarMensaje("El período no se pudo agregar.",2);
 	}
 }
