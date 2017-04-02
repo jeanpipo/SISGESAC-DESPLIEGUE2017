@@ -3,7 +3,7 @@
 <center><h2> Carga de Notas </h2></center>
 <br>
 
-<div class="row" hidden>
+<div class="row">
 	<div class="col-md-12">
 		<h6><center>
 		<div class="col-md-12">
@@ -31,10 +31,9 @@
 		</div>
 	</div>
 </div> 
-
-<div class="row">
-	<div class="col-md-3"></div>
-	<div class="col-md-6">
+<!--
+<div class="col-md-12">
+		<center><h3>Consulta</h3>
 		<div class="col-md-6">
 			Instituto:
 			<div id="divInst">
@@ -50,28 +49,38 @@
 			</div>
 
 
-		<br><br>
-		</div>
-		<div class="col-md-6">
-
-			Período:
+			Periodo:
 			<div id="divPer">
 				<select class='selectpicker' id="selPer" data-live-search='true' data-size='auto' multiple data-max-options="1" title='Seleccione Periodo'>
 				</select>
 			</div>
+
+		<br><br>
+		</div>
+		<div class="col-md-6">
 
 			Trayecto:
 			<div id="divTra">
 				<select class='selectpicker' id="selTra" data-live-search='true' onchange="cargarSeccion()" data-size='auto' multiple data-max-options="1" title='Seleccione Periodo'>
 				</select>
 			</div>
-			
+
+			Sección:
+			<div id="divSec">
+				<select class='selectpicker' id="selSec" data-live-search='true' onchange="cargarUni()" data-size='auto' multiple data-max-options="1" title='Seleccione Sección'>
+				</select>
+			</div>
+
+			Unidad Curricular:
+			<div id="divUni">
+				<select class='selectpicker' id="selUni" data-live-search='true' onchange="listarEstudiantes(succListarEstudiantesCargarNotas,$('#selUni').val()[0])" data-size='auto'>
+				</select>
+			</div>
+
+			<br><br>
 		</div>
 
-	</div>
-</div>
-
-
+-->
 
 <div class="row-fluid">
 	<div class="col-md-12">

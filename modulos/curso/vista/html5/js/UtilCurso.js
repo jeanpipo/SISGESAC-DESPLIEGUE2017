@@ -307,7 +307,7 @@ function succCargarPensums(data){
 
 	}
 	else{
-		mostrarMensaje("No hay pensums para este instituto.",3);
+		//mostrarMensaje("No hay pensums para este instituto.",3);
 	}
 	cad += "</select>";
 
@@ -968,7 +968,7 @@ function succCargarCursosPensum(data){
 			cad += "<button id='btn-b' class='btn btn-dark btn-xs' onclick='actualizarCursos()'>Guardar Cambios</button>";
 	}
 	else{
-		mostrarMensaje("No hay cursos disponibles en la base de datos",2);
+		//mostrarMensaje("No hay cursos disponibles en la base de datos",2);
 	}
 
 	$("#tableCur").remove();
@@ -1392,7 +1392,7 @@ function succCargarNotas(data){
 	var dat = data.cursoInfoMontar;
 
 	if(dat){
-		/*$("#inst").html(dat[0]['nombreins']);
+		$("#inst").html(dat[0]['nombreins']);
 		$("#tra").html(dat[0]['numtrayecto']);
 		if(dat[0]['nombredocente'] != null)
 			$("#doc").html(dat[0]['nombredocente']);
@@ -1404,7 +1404,7 @@ function succCargarNotas(data){
 
 		$("#per").html(dat[0]['nombreperiodo']);
 		$("#uni").html(dat[0]['nombreuni']);
-		*/
+		
 		//montarSelects(data);
 		succMontarSelects(data);
 
@@ -1429,8 +1429,8 @@ function succCargarNotas(data){
  */
 
 function succListarEstudiantesCargarNotas(data){
-	
-	console.log(datos);
+	//alert("ajkds");
+	console.log(data);
 	
 	var est = data.estudiante;
 	var cad = "";
@@ -1440,8 +1440,9 @@ function succListarEstudiantesCargarNotas(data){
 	for(var j = 0; j < edos.length; j++){
 		cad2 += "<option value='"+edos[j]['codigo']+"'>"+edos[j]['nombre']+"</option>";
 	}
-
+	
 	if(est){
+	
 		cad += "<table id='table-Est' class='table table-hover table-condensed table-responsive'>";
 
 		cad += "<th style='text-align:center' class='dark'>#</th>";
@@ -1498,15 +1499,16 @@ function succListarEstudiantesCargarNotas(data){
 				cad += "</tr>";
 			}
 		}
-
+		
 		cad += "</table>";
 
 		//alert(datos);
 		console.log(data.datoscurso);
-
-		if(per.CurEstudianteModificar && data.datocurso[0].cod_docente == datos[0].codigo)
+		if(datos != undefined)
+			if(per.CurEstudianteModificar && datos || (data.datocurso[0].cod_docente == datos[0].codigo))
 			cad += "<br><br><center><button class='btn btn-dark btn-xs' onclick='guardarNotas()'>Cargar Notas</button></center>";
-	}
+
+}
 	else {
 		mostrarMensaje("No hay resultados para los criterios de búsqueda",3);
 	}
@@ -1559,7 +1561,8 @@ function succGuardarNotas(data){
 }
 
 function succMontarSelects(data){
-
+//alert("chonfli");
+	console.log(data);
 	var dat = data.cursoInfoMontar;
 	var tmp = 400;
 	var i = 1;
@@ -1651,12 +1654,12 @@ function succMontarSelects(data){
 				listarEstudiantes(succListarEstudiantes,obtenerGet('codigo'));
 			}
 			else {
-				listarEstudiantes(succListarEstudiantes,$("#selUni").val());
+				listarEstudiantes(succListarEstudiantes,$("#selUni").val()[0]);
 			}
 		}
 		$(".selectpicker").selectpicker("refresh");
 	}, tmp*i);
-
+	return;
 }
 
 
