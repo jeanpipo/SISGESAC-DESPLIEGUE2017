@@ -86,17 +86,72 @@ $(document).ready(function() {
 		mostrarInformaion();
 		activarCal();
 	}
-	else{	
-
-		verInstitutoListar();
-		verEstadolistar();
-		verPersona();			
+	else if(getVarsUrl().Fbtn || getVarsUrl().FCampo || getVarsUrl().FInstituto || getVarsUrl().FPensum){	
+	//	window.location.href = 'index.php?m_modulo=persona&m_vista=Listar&m_formato=html5&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo;
+		//alert($("#bTodos1").css("background-color"));rgb(79, 216, 176);
+	
+		if(getVarsUrl().Fbtn=="todos"){
+			$("#bTodos3").css("background-color","#209472");
+			$("#bTodos1").css("background-color","#4FD8B0");
+			$("#bTodos2").css("background-color","#4FD8B0");
+		}
+		else if(getVarsUrl().Fbtn=="estudiantes"){
+			$("#bTodos3").css("background-color","#4FD8B0");
+			$("#bTodos1").css("background-color","#4FD8B0");
+			$("#bTodos2").css("background-color","#209472");
+		}
+		else{
+			$("#bTodos3").css("background-color","#4FD8B0");
+			$("#bTodos1").css("background-color","#209472");
+			$("#bTodos2").css("background-color","#4FD8B0");
+		}
+		//verEstadolistar();
+		verInstitutoListar();		
+				
+		$("#campo").val(quitarEspacioUrl(getVarsUrl().FCampo));
+		setTimeout(function(){ 			
+			$("#selectInstituto").val(getVarsUrl().FInstituto);		
+			$('#selectInstituto').selectpicker('refresh');
+			verPNFListar();
+			if(getVarsUrl().Fbtn=="todos")
+				verEstadolistar();
+			else if(getVarsUrl().Fbtn=="estudiantes")
+				verEstadoEs();
+			else
+				verEstadoEm(); 
+			
+			setTimeout(function(){ 
+				$("#selectPNF").val(getVarsUrl().FPensum);		
+				$('#selectPNF').selectpicker('refresh');
+				$("#selectEstado").val(getVarsUrl().FEstado);
+				$('#selectEstado').selectpicker('refresh');
+				if(getVarsUrl().Fbtn=="todos")
+					verPersona(); //TodosFocus();
+				else if(getVarsUrl().Fbtn=="estudiantes")
+					verPersonaEstudiante();
+				else
+					verPersonaEmpleado();
+			},450);
+		},200);
 		
+	}
+	else if(getVarsUrl().m_vista=="CargaArchivoNuevoIngreso"){
+		selectInstituto();		
+		$("#btnRegistrar").hide();
+		$("#noInscritos").hide();
+		$("#noInscritos").hide();
+		$("#limpiarFormulario").hide();
+	}
+	else{
+		verEstadolistar();
+		verInstitutoListar();		
+		verPersona();
 		TodosFocus();
 	}
 
 
-} );
+
+});
 
 
 
@@ -113,7 +168,19 @@ function getVarsUrl(){
 
 
 function nuevoPersonaEstudiante (){	
-	window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&accion=N&persona=-1'; 
+	var Fbtn="";
+	//alert($("#bTodos1").css("background-color"));rgb(79, 216, 176);
+	if($("#bTodos3").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="todos";
+	else if($("#bTodos2").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="estudiantes";
+	else
+		Fbtn="profesores";
+	if($("#campo").val()!=undefined)
+		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&accion=N&persona=-1&FInstituto='+$("#selectInstituto").val()+'&FPensum='+$("#selectPNF").val()+'&FEstado='+$("#selectEstado").val()+'&FCampo='+$("#campo").val()+'&Fbtn='+Fbtn; 
+	else
+		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&accion=N&persona=-1&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo+'&Fbtn='+getVarsUrl().Fbtn; 
+																																								 																							
 }
 
 function nuevoPersonaEmpleado (){	
@@ -279,8 +346,8 @@ function verInstitutoListar(){
 */
 
 function montarSelectInstitutoPersona(data){
-	var cadena = "";
 
+	var cadena = "";
 	$("#selectIns").remove();
 	cadena+="<div id='selectIns'> Instituto ";
 	
@@ -295,7 +362,25 @@ function montarSelectInstitutoPersona(data){
 	if(data.institutos){
 		for(var x=0; x<data.institutos.length;x++)
 		{
-			cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+			if(data.datos){
+				if((data.datos[0].emp_inst != data.institutos[x]["codigo"] || !data.datos[0].emp_inst ) && (data.datos[0].est_inst != data.institutos[x]["codigo"] || !data.datos[0].est_inst ) )
+					cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+				else{
+					
+					cadena += '<option selected value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+					setTimeout(function(){ 
+
+						if(data.tipo_persona=='estudiante' && !getVarsUrl().FPensum)
+							verPNFEs();
+						else if(data.tipo_persona=='empleado' && !getVarsUrl().FPensum)
+							verPersonaEmpleado(); 
+						else if(!getVarsUrl().FPensum)
+							verPNFListar();
+					}, 1000);
+				}
+			}
+			else
+				cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
 		}
 	}
 
@@ -320,7 +405,20 @@ function montarSelectInstituto(data){
 	if(data.institutos)
 	for(var x=0; x<data.institutos.length;x++)
 	{	
-		cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+		if(data.datos){
+			if((data.datos[0].emp_inst != data.institutos[x]["codigo"] || !data.datos[0].emp_inst ) && (data.datos[0].est_inst != data.institutos[x]["codigo"] || !data.datos[0].est_inst ) )
+				cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+			else{
+				cadena += '<option selected value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';			
+
+				setTimeout(function(){ 
+					verPNFEsPrincipal();
+				}, 1000);
+				
+			}
+		}
+		else
+			cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
 	}
 	cadena +="</select>";
 
@@ -735,7 +833,7 @@ function guardarPersona(){
 	   a='archivo';
 	   b=file;
 	});
-
+	//alert(JSON.stringify(b));
 	var arr= Array( "m_modulo"	,	"persona",
 					"m_accion"	,	"agregar",
 					"cedPersona",	$("#ced_persona").val(),
@@ -771,6 +869,14 @@ function guardarPersona(){
 * por ajax.
 */
 function modificarPersona(codigo){
+	var Fbtn="";
+	//alert($("#bTodos1").css("background-color"));rgb(79, 216, 176);
+	if($("#bTodos3").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="todos";
+	else if($("#bTodos2").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="estudiantes";
+	else
+		Fbtn="profesores";
 
 	if(getVarsUrl().persona)
 		codigo=getVarsUrl().persona;
@@ -778,13 +884,30 @@ function modificarPersona(codigo){
 		codigo=$('#cod_persona').val();
 	if(!codigo || codigo=='null')
 		mostrarMensaje("Debes seleccionar a una persona.",2);
+
+
+
+	else if($("#campo").val()!=undefined){
+		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_accion=listar&m_formato=html5&persona='+codigo+'&accion=M&FInstituto='+$("#selectInstituto").val()+'&FPensum='+$("#selectPNF").val()+'&FEstado='+$("#selectEstado").val()+'&FCampo='+$("#campo").val()+'&Fbtn='+Fbtn;
+	}
 	else
-		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_accion=listar&m_formato=html5&persona='+codigo+'&accion=M';
+		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_accion=listar&m_formato=html5&persona='+codigo+'&accion=M&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo+'&Fbtn='+getVarsUrl().Fbtn;
+
+
 }
 
 function mostrarPersona(){
 
 	var codigo=null;
+	var Fbtn="";
+	//alert($("#bTodos1").css("background-color"));rgb(79, 216, 176);
+	if($("#bTodos3").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="todos";
+	else if($("#bTodos2").css("background-color")=="rgb(32, 148, 114)")
+		Fbtn="estudiantes";
+	else
+		Fbtn="profesores";
+
 	if(getVarsUrl().persona)
 		codigo=getVarsUrl().persona;
 	else
@@ -793,9 +916,17 @@ function mostrarPersona(){
 	if(!codigo || codigo=='null')	
 		mostrarMensaje("Debes seleccionar a una persona.",2);
 	else
-		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&persona='+codigo+'&accion=V';
+		window.location.href = 'index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&persona='+codigo+'&accion=V&FInstituto='+$("#selectInstituto").val()+'&FPensum='+$("#selectPNF").val()+'&FEstado='+$("#selectEstado").val()+'&FCampo='+$("#campo").val()+'&Fbtn='+Fbtn;
 }
 
+function volverPersona(){
+
+	if(getVarsUrl().FEstado || getVarsUrl().Fbtn || getVarsUrl().FCampo )
+	window.location.href = 'index.php?m_modulo=persona&m_vista=Listar&m_formato=html5&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo+'&Fbtn='+getVarsUrl().Fbtn;
+	else 
+	window.location.href = "index.php?m_accion=listar&m_modulo=persona&m_vista=Listar&m_formato=html5";
+
+}
 
 function bloquearCampos(){			
 	bloquearCamposEstudiante();		
@@ -885,7 +1016,7 @@ function succMontarModificarPersona2(data){
 function succMontarModificarPersona(data){
 	
 	tabsActivos(); 
-	alert(data);
+
 	$("#ced_persona").val(data.persona[0]['cedula']);
 	$("#rif_persona").val(data.persona[0]['rif']);
 	$("#nombre1").val(data.persona[0]['nombre1']);
@@ -1055,12 +1186,16 @@ function borrarPersona(){
 
 }
 
+function quitarEspacioUrl(str){
+	return str.replace(/%20/g," ");
+}
+
 function succMontarEliminarPersona (data){
 
 	if(data.estatus>0){
 		mostrarMensaje(data.mensaje,1);
-		setTimeout(function(){ 
-			window.location.href = 'index.php?m_accion=listar&m_modulo=persona&m_vista=Listar&m_formato=html5'
+		setTimeout(function(){ 			
+			window.location.href = 'index.php?m_accion=listar&m_modulo=persona&m_vista=Listar&m_formato=html5&FInstituto='+getVarsUrl().FInstituto+'&FPensum='+getVarsUrl().FPensum+'&FEstado='+getVarsUrl().FEstado+'&FCampo='+getVarsUrl().FCampo+'&Fbtn='+getVarsUrl().Fbtn;
 		}, 2000);
 	}
 	else
@@ -1120,23 +1255,23 @@ function crearUsuario(){
 function preGuardarUsuario(){
 	var bool=true;
 
-	if(!$("#usuario").val().trim()){
+	if(!$("#dialogoCrearUsuario #usuario").val().trim()){
 		bool=false;
 		mostrarMensaje("Debes introducir un nombre de usuario",2);
 	}
-	else if($("#rol").val()=="-1"){
+	else if($("#dialogoCrearUsuario #rol").val()=="-1"){
 		bool=false;
 		mostrarMensaje("Debes seleccionar un rol",2);
 	}
-	else if(!$("#clave1").val()){
+	else if(!$("#dialogoCrearUsuario #clave1").val()){
 		bool=false;
 		mostrarMensaje("Debes ingresar una clave",2);
 	}
-	else if(!$("#clave2").val()){
+	else if(!$("#dialogoCrearUsuario #clave2").val()){
 		bool=false;
 		mostrarMensaje("Debes confirmar la clave",2);
 	}
-	else if($("#clave1").val() != $("#clave2").val()){
+	else if($("#dialogoCrearUsuario #clave1").val() != $("#dialogoCrearUsuario #clave2").val()){
 		bool=false;
 		mostrarMensaje("Las claves introducidas NO coinciden",2);
 	}
@@ -1150,9 +1285,9 @@ function guardarUsuario(){
 	var arr = Array("m_modulo"	,	"persona",
 					"m_accion"	,	"agregarUsuario",
 					"codPersona",   $("#cod_persona").val(),
-					"rol"		,	$("#rol").val(),	
-					"clave"		,	$("#clave1").val(),
-					"usuSistema",	$("#usuario").val()							
+					"rol"		,	$("#dialogoCrearUsuario #rol").val(),	
+					"clave"		,	$("#dialogoCrearUsuario #clave1").val(),
+					"usuSistema",	$("#dialogoCrearUsuario #usuario").val()							
 					);		
 	ajaxMVC(arr,succGuardarUsuario,errors);
 }
@@ -1166,7 +1301,8 @@ function succGuardarUsuario(data){
 }
 
 function succAgregarPersona(data){
-	console.log(data);
+	//alert(JSON.stringify(data));
+		//alert(JSON.stringify(data));
 	if(data.estatus>0)
 		mostrarMensaje(data.mensaje, 1);
 	else
@@ -1212,6 +1348,10 @@ function succAgregarPersona(data){
 	}
 }
 
+function fichaPersonaPDF(){							
+
+	window.open('index.php?m_modulo=persona&m_vista=fichaPersona&m_accion=modificar&m_formato=pdf&codPersona='+$('#cod_persona').val()).focus();
+}
 
 
 function exportarODS(){
@@ -1274,13 +1414,333 @@ function removerEsEm(){
 	
 }
 
+function cargaArchivoNuevoIngreso(){
+	var a="archivo";
+	var b="";
+	
+	jQuery.each($('#archivo')[0].files, function(i, file) {
+	   a='archivo';
+	   b=file;
+
+	});
+	//alert(JSON.stringify($('#archivo')[0].files));
+	var arr = Array("m_modulo"	,	"persona",
+					"m_accion"	,	"cargaArchivoNuevoIngreso",					
+					"instituto"	,	$("#selectInstituto").val(),
+					"pnf"		,	$("#selectPNF").val(),
+					a 			,	b
+					);	
+
+	ajaxMVC(arr,succCargaArchivoNuevoIngreso,errors);
+
+}
+
+function succCargaArchivoNuevoIngreso(data){
+	
+	//alert(data.contadorExiste);
+	if(data.contadorExiste>1){
+		$("#tablaNo").remove();
+		var cadena=""
+		cadena+="<div id='tablaNo'> <b> <font color='red'>ESTAS PERSONAS DEBE SER REGISTRADAS MANUALMENTE ";
+		cadena+="EN EL MODULO DE ESTUDIANTES PORQUE YA SE ENCUENTRAN REGISTRAS EN EL SISTEMA </font></b>";
+		cadena+="<table border='1'>";	
+		var datos=data.personasYaRegistradas;
+		var datosSplit="";
+		for(var x=0;x<datos.length;x++){
+			cadena+="<tr>";
+			datosSplit=datos[x].split(";");
+			
+			for(var y=0;y<datosSplit.length;y++){				
+				cadena+="<td>"+datosSplit[y]+"</td>";
+			}
+			cadena+="</tr>";
+		}				
+		cadena+="</table>";
+		cadena+="</div>";
+		$(cadena).appendTo('#contenedorTabla');
+	}
+	
+	if(data.contadorNoExite>1){
+		$("#tabla").remove();
+		var cadena=""
+		cadena+="<div id='tabla'> <b> <font color='green'>SE VAN A REGISTRAR LAS SIGUIENTES PERSONAS </font></b>";
+		cadena+="<table border='1'>";	
+		var datos=data.personasAgregadas;
+		var datosSplit="";
+		for(var x=0;x<datos.length;x++){
+			cadena+="<tr>";
+			datosSplit=datos[x].split(";");
+			
+			for(var y=0;y<datosSplit.length;y++){				
+				cadena+="<td>"+datosSplit[y]+"</td>";
+			}
+			cadena+="</tr>";
+		}				
+		cadena+="</table>";
+		cadena+="</div>";
+		$(cadena).appendTo('#contenedorTabla');
+	}
+
+	if(data.contadorNoExite>1 || data.contadorExiste>1){
+		$("#ruta").val(data.ruta);
+		$("#btnCarga").hide();
+		if(data.contadorNoExite>1)
+			$("#btnRegistrar").show();
+		else
+			mostrarMensaje("no hay estudiantes nuevos para cargaArchivoNuevoIngreso.",2);
+		$("#limpiarFormulario").show();
+		if(data.contadorExiste>1){
+			$("#noInscritos").show();
+			if(confirm("Te recomendamos que descargues el listados de los estudiantes que deben ser registrados manualmente. \n ¿deseas descargar el listado?")){
+				pdfEstudiantesNuevoIngresoNoInscrito();
+			}
+		}
+		else
+			$("#noInscritos").hide();
+	}
+	else{
+		mostrarMensaje("Este archivo no contiene los estudiantes para cargar",2);
+	}
+	
+	//alert(JSON.stringify(data));
+}
+
+function registrarCargaArchivoNuevoIngreso(){
+	var arr = Array("m_modulo"	,	"persona",
+					"m_accion"	,	"cargaArchivoNuevoIngreso",
+					"formato"	,	"html5",				
+					"instituto"	,	$("#selectInstituto").val(),
+					"pnf"		,	$("#selectPNF").val(),
+					"ruta" 		,	$("#ruta").val()
+					);	
+
+	ajaxMVC(arr,succRegistrarCargaArchivoNuevoIngreso,errors);
+}
+
+function succRegistrarCargaArchivoNuevoIngreso(data){
+
+	if(data.estatus>0)
+		mostrarMensaje(data.mensaje,1);
+	else
+		mostrarMensaje(data.mensaje,2);
+
+	$("#ruta").val("");
+}
+
+function selectInstituto(){
+	var arr = Array("m_modulo"	,	"instituto",
+					"m_accion"	,	"listar"
+					);
+		
+	ajaxMVC(arr,succSelectInstituto,error);
+}
+
+function succSelectInstituto(data){
+
+	var cadena = "";
+	$("#selectIns").remove();
+	cadena+="<div id='selectIns'> Instituto ";
+	
+	
+	cadena += "<select onchange='selectPNF();' class='selectpicker' id='selectInstituto' title='institutos' data-live-search='true' data-size='auto' data-max-options='12' >"; 
+	cadena += "<option value='-1' >Seleccionar</option>";
+	if(data.institutos){
+		for(var x=0; x<data.institutos.length;x++)
+		{
+			if(data.datos){
+				if((data.datos[0].emp_inst != data.institutos[x]["codigo"] || !data.datos[0].emp_inst ) && (data.datos[0].est_inst != data.institutos[x]["codigo"] || !data.datos[0].est_inst ) )
+					cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+				else					
+					cadena += '<option selected value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';			
+			}
+			else
+				cadena += '<option value="'+data.institutos[x]["codigo"]+'">'+data.institutos[x]["nom_corto"]+'</option>';
+		}
+		setTimeout(function(){						
+			selectPNF();						
+		}, 500);
+	}
+
+	cadena +="</select>";
+
+	$(cadena).appendTo('#selectInstitutos');
+
+	activarSelect();
+}
+
+function selectPNF(){
+
+	var arr = Array("m_modulo"	,	"pensum",
+					"m_accion"	,	"buscarPorInstituto",
+					"codigo"	,	$("#selectInstituto").val()				
+					);
+		
+	ajaxMVC(arr,succSelectPNF,error);
+
+}
+
+function succSelectPNF(data){
+
+	console.log(data);
+	var cadena = "";
+
+	$("#selectPensuma").remove();
+	cadena+="<div id='selectPensuma'> Pensum ";
+	
+	
+	cadena += "<select  class='selectpicker' id='selectPNF' title='pensum' data-live-search='true' data-size='auto' data-max-options='12' >"; 
+	cadena += "<option value='-1'>Seleccionar</option>";
+	
+	if(data.pensum){
+		for(var x=0; x<data.pensum.length;x++)
+		{	
+			if(data.datos){
+				if(data.datos[0].emp_pensum != data.pensum[x]["codigo"] )
+					cadena += '<option value="'+data.pensum[x]["codigo"]+'">'+data.pensum[x][2]+'</option>';
+				else
+					cadena += '<option selected value="'+data.pensum[x]["codigo"]+'">'+data.pensum[x][2]+'</option>';
+			}
+			else 
+				cadena += '<option value="'+data.pensum[x]["codigo"]+'">'+data.pensum[x][2]+'</option>';
+		}
+	}
+	
+	cadena +="</select></div>";
+
+	$(cadena).appendTo('#selectPensum');
+
+	activarSelect();
+}
+
+function  validarCargaArchivo(){
+	var bool=true;
+	msj="";
+	if($("#selectInstituto").val()<0){
+		bool=false;
+		msj="Debe seleccionar un instituto.";
+	}
+	else if($("#selectPNF").val()<0){
+		bool=false;
+		msj="Debe seleccionar un PNF.";
+	}
+	else if(!$("#archivo").val()){
+		bool=false;
+		msj="Debes cargar un archivo.";
+	}
+	/*else if(archivoExtencion ('true')){
+		bool=false;
+	}
+	else if(archivoTamaño('true')){
+		bool=false;
+	}*/
+	
+	if(bool && !$("#ruta").val())
+		cargaArchivoNuevoIngreso();
+	else if(bool && $("#ruta").val()){
+		registrarCargaArchivoNuevoIngreso();
+	}
+	else if(msj)
+		mostrarMensaje(msj,2);
+
+}
+
+
+
+function archivoExtencion (mensaje){ 
+	
+	var  extensiones_permitidas = new Array(".odt", ".txt",".csv",".xls",".doc",".ods",".docx"); 
+	var  error = ""; 
+	var  archivo=$("#archivo").val();
+	
+	if (archivo) 	  
+   { 
+	    //recupero la extensión de este nombre de archivo 
+	    var  extension = (archivo.substring(archivo.lastIndexOf("."))).toLowerCase(); 
+	     
+	    //compruebo si la extensión está entre las permitidas 
+	    var  permitida = false; 
+	    for (var i = 0; i < extensiones_permitidas.length; i++) 
+	    { 
+	       if (extensiones_permitidas[i] == extension) 
+	       { 
+		       permitida = true; 		        
+		       break; 
+	        } 
+	    } 	      
+	} 
+	
+
+	if (!permitida){
+
+		if(mensaje){
+			error = "Comprueba la extension del archivo a subir. \n Solo se pueden cargar archivos con extensiones: " + extensiones_permitidas.join(); 
+			mostrarMensaje(error,2);
+		}
+		$("#archivo").val("");
+		var cadena ="";		
+		return false;
+	}
+	else 
+		return true;
+
+}
+
+function archivoTamaño(mensaje){
+	input = document.getElementById('archivo');
+	if($("#archivo").val()){
+		if((input.files[0].size/1024/1024)>1){
+			if(mensaje)
+				mostrarMensaje("el archivo NO puede pesar mas de 1 MB ",2);
+
+			$("#archivo").val("");
+			return false;
+		}
+		else
+			return true;
+	}
+}
+
+function archivo(){
+
+	$("#archivo").on("change", function(){
+	    fotoExtencion(true);
+	    fotoTamaño(true);		
+	});
+}
+
+function limpiarFormularioCargaArchivo(borrarTodo){
+
+	$("#ruta").val("");
+	$("#btnCarga").show();
+	$("#btnRegistrar").hide();
+	$("#limpiarFormulario").hide();
+	$("#noInscritos").hide();
+	$("#tablaNo").remove();
+	$("#tabla").remove();
+	if(!borrarTodo){
+		$("#selectInstituto").val("-1");
+		$("#selectPNF").val("-1");
+		$("#archivo").val("");
+		$('.selectpicker').selectpicker('refresh');
+	}
+
+}
+
+function pdfEstudiantesNuevoIngresoNoInscrito(){
+
+	window.open("index.php?m_modulo=persona&m_formato=pdf&m_vista=nuevoIngresoNoInscrito&m_accion=cargaArchivoNuevoIngreso&ruta="+$("#ruta").val());
+
+}
+
+function (){
+	"index.php?m_modulo=persona&m_vista=Principal&m_formato=html5&accion=N&persona=-1";
+}
+
 /**
 * Funcion Java Script que permite mostrar un mensaje de error.
 */
 function errors(data){	
 	console.log(data);
-	alert(data.mensaje);
+	//alert(JSON.stringify(data));
 	mostrarMensaje("Error de comunicación con el servidor.",2);
 }
-
-

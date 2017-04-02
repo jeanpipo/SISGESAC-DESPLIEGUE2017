@@ -886,12 +886,12 @@ Descripción:
 
 				$pensum=PostGet::obtenerPostGet("pensum");
 				$periodo=PostGet::obtenerPostGet("periodo");
+				if($pensum && $periodo){
+					$r=CursoServicio::listarCurElectivas($pensum,$periodo);
 
-				$r=CursoServicio::listarCurElectivas($pensum,$periodo);
-
-				Vista::asignarDato("electivas",$r);
-				Vista::asignarDato("codigo",PostGet::obtenerPostGet("codigo"));
-
+					Vista::asignarDato("electivas",$r);
+					Vista::asignarDato("codigo",PostGet::obtenerPostGet("codigo"));
+				}
 				Vista::mostrar();
 
 			}

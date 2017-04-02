@@ -114,10 +114,10 @@ class PrelacionServicio
 			// indica
 			// como se indica en parametro y el tipo de parametro que se envia
 			$ejecutar->bindParam(':codigo',$prelacion->obtenerCodigo(), PDO::PARAM_INT);
-			$ejecutar->bindParam(':cod_pensum',$codPensum, PDO::PARAM_INT);
-			$ejecutar->bindParam(':cod_instituto',$codInstituto, PDO::PARAM_INT);
-			$ejecutar->bindParam(':cod_uni_curricular',$codUniCurricular, PDO::PARAM_INT);
-			$ejecutar->bindParam(':cod_uni_cur_prelada',$codUniCurPrelada, PDO::PARAM_INT);
+			$ejecutar->bindParam(':cod_pensum',$prelacion->obtenerCodigoPesum(), PDO::PARAM_INT);
+			$ejecutar->bindParam(':cod_instituto',$prelacion->obtenerCodigoInstituto(), PDO::PARAM_INT);
+			$ejecutar->bindParam(':cod_uni_curricular',$prelacion->obtenerCodigoUniCurricular(), PDO::PARAM_INT);
+			$ejecutar->bindParam(':cod_uni_cur_prelada',$prelacion->obtenerCodigoUniCurPrelada(), PDO::PARAM_INT);
 			$ejecutar->setFetchMode(PDO::FETCH_ASSOC);
 			//ejecuta				
 			$ejecutar->execute();
@@ -198,7 +198,6 @@ class PrelacionServicio
 				$ejecutar->execute();
 				//primera columana codigo
 				$row = $ejecutar->fetchColumn(0);					
-				var_dump($row);
 				// recomendad null a este objeto	
 				unset($ejecutar);
 				// PDO cierrar auntomaticamenta la seccion de db cuando el objeto es null

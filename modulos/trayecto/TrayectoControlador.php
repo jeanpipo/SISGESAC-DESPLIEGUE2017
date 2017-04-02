@@ -292,9 +292,10 @@
 
 		public static function listarTrayectoPensum(){
 			try{
-				
-				$r=TrayectoServicio::obtenerTrayectoPensum(PostGet::obtenerPostGet('codigo'));
-				Vista::asignarDato("trayecto",$r);
+				if(PostGet::obtenerPostGet('codigo')){
+					$r=TrayectoServicio::obtenerTrayectoPensum(PostGet::obtenerPostGet('codigo'));
+					Vista::asignarDato("trayecto",$r);
+				}
 				Vista::mostrar();
 			}
 			catch(Exception $e){

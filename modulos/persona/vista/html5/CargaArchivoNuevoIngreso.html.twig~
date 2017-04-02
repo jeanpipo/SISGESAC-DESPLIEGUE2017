@@ -1,0 +1,61 @@
+{% extends 'Persona.html.twig' %}
+{% block headVista %}
+
+{% endblock %}
+{% block contenido %}
+
+<div class="contenedorListar">
+	<div class="caja col-md-10 col-md-offset-1">
+
+		<p class="text-center titulo-caja">
+			<b>Inscribir Nuevo Ingreso</b>
+		</p>
+
+		<div class="col-md-12  text-center">
+			<p> <b style="color:red">*</b> La información contenida en el archivo debe tener el siguiente orden: <b style="color:black">cedula, apellido, nombre, sexo, e-mail y telefono.</b>
+			<br>	
+			<b style="color:red">*</b> Los archivos que se permiten cargar son los siguientes <b style="color:black"> xls, ods, csv, docx, doc, odt y txt.</b>
+			<br>		
+			<b style="color:red">*</b> Los campos deberan estar separdos por <b style="color:black">";" (punto y coma)</b> en caso de cargar un archivo <b style="color:black"> docx, doc, odt o txt.</b>
+			<br>
+			 <b style="color:red">*</b> Desde la fila  hasta la ultima debe estar la informacion de los estudiantes que se cargaran en el sistema, 
+			no debe haber ninguna fila en blanco.
+			</p>
+		</div>
+
+		<div class="col-md-12 text-center">
+			<div id='selectInstitutos'> 
+				
+			</div>
+
+			<div id='selectPensum'>
+				
+			</div>
+
+			<input type="file" name="archivo" id="archivo" onfocus="archivo();" onchange="archivoExtencion(true); archivoTamaño(true); limpiarFormularioCargaArchivo(true);"> 
+		</div>
+		<div class="col-md-12 text-center" id="contenedorTabla">
+			
+		</div>
+		<div class="col-md-12 text-center" id="btnCarga">
+			<button type="button"  class="btn btn-info" title="Cargar Archivo" onclick="validarCargaArchivo();"><b>Cargar Archivo</b></button>
+			<button type="button"  class="btn btn-info" title="Inscribir" onclick="irAgrgarPersona();"><b>Inscribir Estudiante Manualemnte</b></button>
+			<br><br>
+		</div>
+		<div class="col-md-8 text-center" id="btnRegistrar">
+			<br>
+			<button type="button"  class="btn btn-info" title="Inscribir Estudiante" onclick=" validarCargaArchivo();"><b>Inscribir Estudiantes</b></button>
+			<button type="button" id="noInscritos" class="btn btn-warning" title="Descargar reportes de estudiantes que no se podran inscribir" onclick="pdfEstudiantesNuevoIngresoNoInscrito();"><b>PDF estudiantes NO inscritos</b></button>
+			<br><br>
+		</div>
+		<div class="col-md-4 text-right" id="limpiarFormulario">
+			<br>
+			<button type="button"  class="btn btn-danger" title="Limpiar Formulario" onclick="limpiarFormularioCargaArchivo();"><b>Limpiar formulario</b></button>
+		</div>
+		
+		<input type="hidden" value="" id="ruta">
+	</div>
+
+</div>
+	
+{% endblock %}

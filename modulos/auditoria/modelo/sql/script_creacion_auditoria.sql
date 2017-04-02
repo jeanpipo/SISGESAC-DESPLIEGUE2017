@@ -146,6 +146,20 @@ $$;
 ALTER FUNCTION sis.f_persona_act(p_codigo integer, p_cedula integer, p_rif text, p_nombre1 text, p_nombre2 text, p_apellido1 text, p_apellido2 text, p_sexo text, p_fec_nacimiento date, p_tip_sangre text, p_telefono1 text, p_telefono2 text, p_cor_personal text, p_cor_institucional text, p_direccion text, p_discapacidad text, p_nacionalidad text, p_hijos integer, p_est_civil text, p_observaciones text) 
 OWNER TO admin;
 
+-- DROP SEQUENCE sis.s_persona;
+
+CREATE SEQUENCE sis.s_persona
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START 2432
+  CACHE 1
+  CYCLE;
+ALTER TABLE sis.t_persona
+  OWNER TO admin;
+GRANT ALL ON SEQUENCE sis.s_persona TO admin;
+GRANT ALL ON SEQUENCE sis.s_persona TO public;
+
 
 CREATE OR REPLACE FUNCTION sis.f_persona_ins(p_cedula integer, p_rif text, p_nombre1 text, p_nombre2 text, p_apellido1 text, p_apellido2 text, p_sexo text, p_fec_nacimiento date, p_tip_sangre text, p_telefono1 text, p_telefono2 text, p_cor_personal text, p_cor_institucional text, p_direccion text, p_discapacidad text, p_nacionalidad text, p_hijos integer, p_est_civil text, p_observaciones text) RETURNS integer
     LANGUAGE plpgsql
@@ -153,9 +167,9 @@ CREATE OR REPLACE FUNCTION sis.f_persona_ins(p_cedula integer, p_rif text, p_nom
 DECLARE cod_persona integer := 0;
 	exite integer := 0;
 BEGIN
-	select coalesce(max(codigo),0) from sis.t_persona into cod_persona;
-
-	cod_persona := cod_persona + 1;
+	--select coalesce(max(codigo),0) from sis.t_persona into cod_persona;
+	SELECT nextval('sis.s_persona') into cod_persona;
+	--cod_persona := cod_persona + 1;
 	select codigo from sis.t_persona where cedula=p_cedula into exite;
 	IF (exite is  null) THEN
 		insert into sis.t_persona (codigo,		cedula,			rif,
@@ -259,7 +273,90 @@ ALTER FUNCTION aud.f_agregarPermisoATodosUsuarios()
   
   select aud.f_agregarPermisoATodosUsuarios();
 
+CREATE OR REPLACE FUNCTION sis.f_extrarArchivo (p_ruta text, p_codigo int) returns void
+   as $BODY$
+DECLARE
+	usuario text;
+BEGIN
+	  
+	select usename from pg_user where usename = CURRENT_USER into usuario;
+	
+	if((SELECT rolsuper FROM pg_roles where rolname=CURRENT_USER)=true) then
+		PERFORM lo_export(sis.t_archivo.archivo,p_ruta ) 
+		FROM sis.t_archivo WHERE codigo= p_codigo;
+	else 
+		EXECUTE format('alter user '|| current_user||' with superuser');
+		PERFORM lo_export(sis.t_archivo.archivo,p_ruta ) 
+		FROM sis.t_archivo WHERE codigo= p_codigo;
+		EXECUTE format('alter user '|| current_user||' with nosuperuser');
+	end if;
+	
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION sis.f_extrarArchivo (p_ruta text, p_codigo int)
+  OWNER TO admin;
+
 --pg_dump postgres > postgres_db.sql
+
+-- DROP SEQUENCE sis.s_persona;
+
+CREATE SEQUENCE sis.s_estudiante
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START 2432
+  CACHE 1
+  CYCLE;
+ALTER TABLE sis.t_estudiante
+  OWNER TO admin;
+GRANT ALL ON SEQUENCE sis.s_estudiante TO admin;
+GRANT ALL ON SEQUENCE sis.s_estudiante TO public;
+
+
+CREATE OR REPLACE FUNCTION sis.f_estudiante_ins(
+    p_cod_persona integer,
+    p_cod_instituto integer,
+    p_cod_pensum integer,
+    p_num_carnet text,
+    p_num_expediente text,
+    p_cod_rusnies text,
+    p_cod_estado text,
+    p_fec_inicio date,
+    p_fec_fin date,
+    p_condicion text,
+    p_observaciones text)
+  RETURNS integer AS
+$BODY$
+DECLARE cod_estudiante integer := 0;
+BEGIN
+	--select coalesce(max(codigo),0) from sis.t_estudiante into cod_estudiante;
+
+	--cod_estudiante := cod_estudiante + 1;
+	
+	SELECT nextval('sis.s_estudiante') into cod_estudiante;
+
+	insert into sis.t_estudiante (	codigo, 		cod_persona, 		cod_instituto,
+					cod_pensum, 		num_carnet, 		num_expediente,
+					cod_rusnies, 		cod_estado,		fec_inicio,
+					fec_fin, 		condicion,		observaciones
+				     )
+			     values (	cod_estudiante, 	p_cod_persona, 		p_cod_instituto,
+					p_cod_pensum, 		p_num_carnet,		p_num_expediente,
+					p_cod_rusnies, 		p_cod_estado, 		p_fec_inicio,
+					p_fec_fin, 		p_condicion, 		p_observaciones
+				    );
+
+
+
+  RETURN cod_estudiante;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION sis.f_estudiante_ins(integer, integer, integer, text, text, text, text, date, date, text, text)
+  OWNER TO admin;
 
 
 

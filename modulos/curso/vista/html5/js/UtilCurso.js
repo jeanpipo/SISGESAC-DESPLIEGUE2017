@@ -361,7 +361,7 @@ function succCargarPeriodos(data){
 		cad += "<select class='selectpicker' id='selPer' onchange='cargarTrayectos()' data-live-search='true' data-size='20'>";
 	}
 	if(per){
-		cad += "<option value='-1' disabled selected> Seleccione Periodo</option>";
+		cad += "<option value='-1' disabled selected> Seleccione Período</option>";
 
 		for(var i = 0; i < per.length; i++){
 			cad += "<option value="+per[i][0]+">"+per[i][1]+"</option>";
@@ -369,7 +369,7 @@ function succCargarPeriodos(data){
 	}
 	else{
 		cad += "<option></option>";
-		mostrarMensaje("No hay periodos abiertos para este pensum.",2);
+		mostrarMensaje("No hay períodos abiertos para este pensum.",2);
 	}
 
 	cad += "</select>";

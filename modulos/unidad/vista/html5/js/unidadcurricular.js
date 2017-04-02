@@ -58,14 +58,14 @@ function consultarDetalleUni(data) {
 		cadena+="<a href='#'' >"+unidad[11]+"</a></td></tr>";
 		if (data.usada != null){
 			usada = data.usada;
-			cadena+="<tr><td>Usada en pensums:</td><td>";
+			cadena+="<tr><td>Usada en los Pensum:</td><td>";
 			cadena+="<a href='#'' >";
 			for (var i = 0; i < usada.length ; i++) {	
 				cadena+=" ("+usada[i][0]+") ";
 			}
 			cadena+="</a></td></tr>";
 		}else{
-			cadena+="<tr><td>Usada en pensums:</td><td>";
+			cadena+="<tr><td>Usada en los Pensum:</td><td>";
 			cadena+="<a href='#'' > No asiganado ningun pensum</a></td></tr>";
 		}
 

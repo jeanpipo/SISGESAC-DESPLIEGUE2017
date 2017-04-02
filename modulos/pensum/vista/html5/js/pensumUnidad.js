@@ -29,9 +29,16 @@ function ObtenerIDPensum(){
 	 if (getString != -1){
        	 getString+=13;
 	     var a = loc.substring(getString,getString+25);
-	
-	     $("#codigoPensum").val(a);
-	     return a;
+	     console.log(a);
+	     var i = a.indexOf('#');
+	     if (i == -1){
+	     	$("#codigoPensum").val(a);
+	     	 return a;
+	     }else{
+	     	var b = a.substring(0, i);
+	     	$("#codigoPensum").val(b);
+	     	return b;
+	     }	    
 	   }else{
 	//   	alert('No posee codigo Pensum en url');
 	   	return 'not';
@@ -48,9 +55,10 @@ function ssccCargaUnidadesC(data){
 	cad += "<select class='selectpicker' id='selUnidad' onchange='obtenerCodigo()' data-live-search='true' data-size='auto' data-max-options='1' title='Seleccione Unidad Curricular'>";
 
 	if(ins){
+		console.log(data)
 		for(var i = 0; i < ins.length; i++){
 				
-			cad += "<option value="+ins[i][0]+"-"+ins[i][9]+">"+ins[i]["nombre"]+"</option>";
+			cad += "<option value="+ins[i][0]+">"+ins[i]["nombre"]+"</option>";
 		}
 		cad += "</select>";
 	}
@@ -98,7 +106,7 @@ function succCargarSelect(data){
 	if(ins){
 			cad += "<option value='-1' selected>Sin Asignar</option>";
 		for(var i = 0; i < ins.length; i++){
-
+			if (ins[i][0] != null)
 			cad += "<option value="+ins[i][0]+">"+ins[i][2]+"</option>";
 		}
 		cad += "</select>";
@@ -139,7 +147,7 @@ function succCargarListT(data){
 	    		numt = trayectos[i]['cod_trayecto']; }
 
 	    	  cadena+="  <tr class='active' href='#' onclick='verDetalle( "+ trayectos[i]["cod_uni_curricular"]+ "); asignarUniCodigo("+ trayectos[i][9]+ ")' >";
-	          cadena+="<td style='text-align: left;'># "+ numt  +" ("+trayectos[i][9]+")</td>";
+	          cadena+="<td style='text-align: left;'># "+ numt  +"</td>";
 	    	  cadena+="<td style='text-align: left;' >"+ trayectos[i][27]+ "</td>";
 	    	  cadena+="<td colspan='2' style='text-align: left;'>("+ trayectos[i]["cod_uni_curricular"]+ ") "+ trayectos[i][15]+ "</td>";
 	    	  cadena+="<td></td> ";
@@ -244,9 +252,9 @@ function agregarModificar(){
 			}
 			// unidada curricular 
 			var codigoUnidad = $("#selUnidad").val(); 
-			
+		/*	
 			var a = codigoUnidad.search("-");	
-		    var UniCod = codigoUnidad.substring(0,a);	
+		    var UniCod = codigoUnidad.substring(0,a);	*/
 		  
 
 		    // tipo	
@@ -257,7 +265,7 @@ function agregarModificar(){
 				"m_accion","AgregarUniTraPen",
 				"pensum",$("#codigoPensum").val(),
 				"trayecto", tray,
-				"codigoUnidad",UniCod,
+				"codigoUnidad",codigoUnidad,
 				"tipo",tipo[0]
 				);	 
 			
@@ -269,7 +277,7 @@ function agregarModificar(){
 					"codigo", $("#codigo").val(),
 					"pensum",$("#codigoPensum").val(),
 					"trayecto", tray,
-					"codigoUnidad",UniCod,
+					"codigoUnidad",codigoUnidad,
 					"tipo",tipo[0]
 				);	 
 			  ajaxMVC(arr,succEditAgregando,erroEdit);
@@ -341,7 +349,7 @@ function succEditconsulta(data){
 	$("#codigo").val(data.UnidadR[0]["codigo"]);
 	$("#codigoUni").val(data.UnidadR[0]["cod_uni_curricular"]);
 	// select unidada
-	$("#selUnidad").val(data.UnidadR[0]["cod_uni_curricular"]+"-"+data.UnidadR[0]["descripcion"]);
+	$("#selUnidad").val(data.UnidadR[0]["cod_uni_curricular"]);
 	// select trayecto
 
 	if (data.UnidadR[0]["cod_trayecto"]){
@@ -352,8 +360,10 @@ function succEditconsulta(data){
 	// 
 	$("#selTipo").val(data.UnidadR[0]["cod_tipo"]);
 
-	$(".selectpicker").selectpicker("refresh");
-
+	$('#seltray').selectpicker("refresh");
+	$('#selTipo').selectpicker("refresh");
+	$('#selUnidad').selectpicker("refresh");
+	$('#codigoUni').selectpicker("refresh");
 
 }
 
@@ -402,7 +412,7 @@ function eliminarUnidadR(){
 }
 
 function succEliminarUnidad(data){
-	alert()
+	
 	console.log(data)
 	if(data.estatus > 0){
 		mostrarMensaje("Exito eliminando Relacion",1)
@@ -413,7 +423,7 @@ function succEliminarUnidad(data){
 }
 
 function errorEliminado(data){
-	alert()
+
 	console.log(data)
 	console.log(data.responseText)
 	mostrarMensaje("No se pudo eliminar la unidad",2)
@@ -466,6 +476,10 @@ function mensajeErrorDB(cadena,mensaje){
 	  var ViolacionCheke = data.search("23514");
 	  if(ViolacionCheke != -1){
 	  	mostrarMensaje("Violacion de una check_violation "+mensaje,2);
+	  }
+	  var ViolacionPrivilegios = data.search("42501"); 
+	  if(ViolacionPrivilegios != -1){
+	  	mostrarMensaje("Violacion de una Privilegios "+mensaje,2);
 	  }
 
 }

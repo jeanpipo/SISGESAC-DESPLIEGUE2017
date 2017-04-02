@@ -44,7 +44,8 @@ function succCargarList(data){
 		cadena+=" <div class='trow' style='width:100%; height:200px; overflow:auto;'>";		                			
 		cadena+="<table class='table table-hover mbn'><thead><tr class='active'><th>#N°</th> <th>N° de trayecto</th><th colspan='2'>Certificado</th><th></th></tr></thead>";
 	    cadena+="<tbody> ";
-	    for (var i = 0; i < trayectos.length ; i++) {	    	
+	    for (var i = 0; i < trayectos.length ; i++) {	  
+	    	if (trayectos[i][0] != null )
 	    	 cadena+="  <tr class='active' href='#' onclick='verDetalleTrayecto( "+ trayectos[i][0]+ ")'><td># "+ i+ "</td> <td>"+ trayectos[i][1]+ "</td> <td colspan='2'>"+ trayectos[i][2]+ "</td> <td></td> </tr>";
 	    };
 	    cadena+=""
@@ -244,6 +245,7 @@ function succEliminando(data){
 
 function errorEliminando(data){	
 	console.log(data.responseText);	
+	mensajeErrorDB(data, "Error Eliminado Trayecto consultar LOG")
 }
 
 function consultarPorPatron(){
@@ -278,8 +280,17 @@ function ObtenerIDPensum(){
        	 getString+=13;
 	     var a = loc.substring(getString,getString+25);
 	     console.log(a);
-	     $("#codigoPensum").val(a);
-	     return a;
+	     var i = a.indexOf('#');
+
+	      console.log(i);
+	     if (i == -1){
+	     	$("#codigoPensum").val(a);
+	     	 return a;
+	     }else{
+	     	var b = a.substring(0, i);	     
+	     	$("#codigoPensum").val(b);
+	     	return b;
+	     }	    
 	   }else{
 	//   	alert('No posee codigo Pensum en url');
 	   	return 'not';
@@ -331,4 +342,8 @@ function mensajeErrorDB(cadena,mensaje){
 	  	mostrarMensaje("Violacion de una check_violation "+mensaje,2);
 	  }
 
+	 var ViolacionPrivilegios = data.search("42501"); 
+	  if(ViolacionPrivilegios != -1){
+	  	mostrarMensaje("Violacion de una Privilegios "+mensaje,2);
+	  }
 }

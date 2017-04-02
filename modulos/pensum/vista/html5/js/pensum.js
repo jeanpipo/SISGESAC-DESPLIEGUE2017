@@ -33,7 +33,7 @@ function agregarPensum(){
 					 "fecha",$("#fecha").val()
 
 					 );
-	ajaxMVC(arr,succAgregarPensum,errorModificandoPensum);
+	ajaxMVC(arr,succModificar,errorModificandoPensum);
 	}else{
 	var arr = Array ("m_modulo", "pensum",
 				 "m_accion", "preModifAgre",				
@@ -48,8 +48,15 @@ function agregarPensum(){
 				 );
 	ajaxMVC(arr,succAgregarPensum,errorAgregarPensum);
 	}
-	console.log(arr.toString());
-	
+}
+
+function succModificar(data){
+	console.log(data)
+	if (data.estatus>0){	
+			mostrarMensaje("El pensum ha sido agregado satisfactoriamente!",1);			
+	}else{
+			mostrarMensaje("Error Tratando de Modificar pensum",2);
+	}
 
 }
 
@@ -134,43 +141,8 @@ function validarModificar(){
 	{modificar();}
 }
 
-function modificar(){
-	console.log('llamado');
-	if (confirm("¿Desea modificar el siguiente pensum?")){
 
-		var arr = Array ("m_modulo", "pensum",
-					 "m_accion", "modificar",
-					 "codigo", $("#codigo").val(),
-					 "nombre", $("#nombre").val(),
-					 "nom_corto", $("#nom_corto").val(), 
-					 "observaciones", $("#observaciones").val(),
-					 "minCanElectiva", $("#min_cant_elect").val(),
-					 "minCreElectiva", $("#min_cre_elect").val(),
-					 "minCreObli",$("#min_cre_oblig").val(),
-					 "fecha",$("#fecha").val()
 
-					 );
-		console.log(arr.toString());
-/*		var arr = Array ("m_modulo", "pensum",
-					 "m_accion", "modificar",
-					 "codigo",$("#codigo").val(),
-					 "nombre", $("#nombre").val(),
-					 "nom_corto", $("#nom_corto").val(), 
-					 "observaciones", $("#observaciones").val());*/
-		ajaxMVC(arr,succModificar,errorModificar);
-	}
-	else 
-	return false;
-}
-
-function succModificar(data){
-	//alert('ok')
-	if (data.estatus>0){
-		$("#verPensum").modal('hide');
-		mostrarMensaje(data.mensaje,1);
-		recargarPensum();
-	}
-}
 
 function errorModificar(){mostrarMensaje("Problema al modificar",2);}
 
@@ -200,16 +172,14 @@ function succInfoPen(data){
 
 function errorInfoPen(){mostrarMensaje("No se pudo agregar el pensum en este momento");}
 
-function infoEditPensum(data){
-	console.log(data);
-	$("#codigo").val(data["codigo"])
-	$("#nombre").val(data["nombre"])
-	$("#nom_corto").val(data["nom_corto"]); 
-    $("#min_cant_elect").val(data["min_can_electiva"]);
-	$("#min_cre_elect").val(data["min_cre_electiva"]);
-	$("#min_cre_oblig").val(data["min_cre_obligatoria"]);
-	$("#fecha").val(data["fec_creacion"]);
-	$("#observaciones").val(data["observaciones"]);
+
+function asiganarFecha(){
+	var	valor = $("#fechamod").val();
+	if (valor != null){
+		var fecha = valor.split("-");
+		var dg = fecha[2]+"/"+fecha[1]+"/"+fecha[0];
+		$("#fecha").val(dg);
+	}
 }
 
 
@@ -361,12 +331,21 @@ function ObtenerIDPensum(){
        	 getString+=13;
 	     var a = loc.substring(getString,getString+25);
 	     console.log(a);
-	     return a;
+	     var i = a.indexOf('#');
+	     if (i == -1){
+	     	$("#codigoPensum").val(a);
+	     	 return a;
+	     }else{
+	     	var b = a.substring(0, i);
+	     	$("#codigoPensum").val(b);
+	     	return b;
+	     }	    
 	   }else{
 	//   	alert('No posee codigo Pensum en url');
 	   	return 'not';
 	   }
 }
+
 
 function modificarURL(codigoPensum, formulario){
 	if (formulario == 'info'){
@@ -410,5 +389,21 @@ function mensajeErrorDB(cadena,mensaje){
 	  if(ViolacionCheke != -1){
 	  	mostrarMensaje("Violacion de una check_violation "+mensaje,2);
 	  }
+	  var ViolacionPrivilegios = data.search("42501"); 
+	  if(ViolacionPrivilegios != -1){
+	  	mostrarMensaje("Violacion de una Privilegios "+mensaje,2);
+	  }
 
+}
+
+
+function setClear(){
+	console.log('b')
+	$("#nombre").val('')
+	$("#nom_corto").val(''); 
+    $("#min_cant_elect").val('');
+	$("#min_cre_elect").val('');
+	$("#min_cre_oblig").val('');
+	$("#fecha").val('');
+	$("#observaciones").val('');	
 }

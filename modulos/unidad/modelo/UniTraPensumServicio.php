@@ -80,7 +80,7 @@ class UniTraPensumServicio
 		 *
 		 * @throws Exception 					Si no se puede modificar el UniTraPen.
 		*/
-		public static function modificarPrelacionParametro($codigo, $codPensum, $codInstituto, $codUniCurricular, $codUniCurPrelada){
+		public static function modificarUniTraPenParametro($codigo, $codPensum, $codInstituto, $codUniCurricular, $codUniCurPrelada){
 			try{
 				$conexion=Conexion::conectar();
 				$consulta="select sis.f_uni_tra_pensu_actualizar(:codigo, :cod_pensum, :cod_instituto, :cod_uni_curricular, :cod_uni_cur_prelada)";
