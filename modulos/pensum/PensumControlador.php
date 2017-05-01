@@ -257,11 +257,13 @@
 		{
 			try
 			{
-				$r=PensumServicio::ObtenerPensumInsituto(PostGet::obtenerPostGet('codigo'));
-				$mensaje="Pensum";
-				Vista::asignarDato('pensum',$r);
-				Vista::asignarDato('estatus',1);
-				Vista::asignarDato('mensaje',$mensaje);
+				if(PostGet::obtenerPostGet('codigo')  &&  PostGet::obtenerPostGet('codigo')!="seleccionar"){
+					$r=PensumServicio::ObtenerPensumInsituto(PostGet::obtenerPostGet('codigo'));
+					$mensaje="Pensum";
+					Vista::asignarDato('pensum',$r);
+					Vista::asignarDato('estatus',1);
+					Vista::asignarDato('mensaje',$mensaje);
+				}
 				Vista::mostrar();
 			}
 			catch (Exception $e){

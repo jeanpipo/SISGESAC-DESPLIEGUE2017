@@ -192,7 +192,7 @@ function validarEmail(id,min,max, req){
 function validarTelefono(id, min, max, req){
 	$(".popover").hide();
 	var cad = $(id).val();
-	var val =  	/^[0-9]{3,4}-? ?[0-9]{7}$/;
+	var val =  	/^(\([0-9]{3,4}\)|[0-9]{3,4}-?) ?[0-9]{7}$/;
 
 	if(req){
 		if(cad.length == 0){

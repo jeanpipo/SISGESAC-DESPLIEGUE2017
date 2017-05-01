@@ -1,0 +1,225 @@
+
+**************************** Error n° 1 *****************************
+codigo Error: 1
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 2 *****************************
+codigo Error: 2
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 427
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(427): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(288): PensumServicio::ObtenerPensumTrayecto('')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(64): PensumControlador::buscarPorTrayecto()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 3 *****************************
+codigo Error: 3
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php
+Linea Error: 712
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php(712): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(506): CursoServicio::obtenerCursosPensum('1', '', '')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(65): CursoControlador::obtenerCursosPensum()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(9): CursoControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 4 *****************************
+codigo Error: 4
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 381
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(381): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(260): PensumServicio::ObtenerPensumInsituto('')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(62): PensumControlador::buscarPorInstituto()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 5 *****************************
+codigo Error: 5
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php
+Linea Error: 427
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/modelo/PensumServicio.php(427): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(288): PensumServicio::ObtenerPensumTrayecto('')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/pensum/PensumControlador.php(64): PensumControlador::buscarPorTrayecto()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(37): PensumControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 6 *****************************
+codigo Error: 6
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php
+Linea Error: 712
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php(712): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(506): CursoServicio::obtenerCursosPensum('01', '', '')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(65): CursoControlador::obtenerCursosPensum()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(9): CursoControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 7 *****************************
+codigo Error: 7
+Mensaje error: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «null»
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php
+Linea Error: 488
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/modelo/CursoServicio.php(488): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(472): CursoServicio::listarSeccionPorTrayecto('null', '103')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/curso/CursoControlador.php(61): CursoControlador::buscarSeccionPorTrayecto()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(9): CursoControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 8 *****************************
+codigo Error: 8
+Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_usuario
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php
+Linea Error: 60
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php(60): PDOStatement->execute(Array)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('usuarioind1', '12345')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 9 *****************************
+codigo Error: 9
+Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_usuario
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php
+Linea Error: 60
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php(60): PDOStatement->execute(Array)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('usuarioind1', '12345')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 10 *****************************
+codigo Error: 10
+Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_usuario
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php
+Linea Error: 60
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php(60): PDOStatement->execute(Array)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('usuarioind1', '12345')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 11 *****************************
+codigo Error: 11
+Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_acc_usuario
+CONTEXT:  función PL/pgSQL per.f_usuario_obt_usu_acciones(refcursor,text,text) en la línea 4 en OPEN
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/usuario/modelo/UsuarioServicio.php
+Linea Error: 410
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/usuario/modelo/UsuarioServicio.php(410): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(85): UsuarioServicio::obtenerAccionesUsuarios('usuarioind1')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 12 *****************************
+codigo Error: 12
+Mensaje error: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación t_acc_usuario
+CONTEXT:  función PL/pgSQL per.f_usuario_obt_usu_acciones(refcursor,text,text) en la línea 4 en OPEN
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/usuario/modelo/UsuarioServicio.php
+Linea Error: 410
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/usuario/modelo/UsuarioServicio.php(410): PDOStatement->execute()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(85): UsuarioServicio::obtenerAccionesUsuarios('usuarioind1')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
+**************************** Error n° 13 *****************************
+codigo Error: 13
+Mensaje error: NO tienes permiso para consultar un archivo.
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
+Linea Error: 191
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 14 *****************************
+codigo Error: 14
+Mensaje error: NO tienes permiso para consultar un archivo.
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
+Linea Error: 191
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 15 *****************************
+codigo Error: 15
+Mensaje error: NO tienes permiso para consultar un archivo.
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
+Linea Error: 191
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 16 *****************************
+codigo Error: 16
+Mensaje error: NO tienes permiso para consultar un archivo.
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/foto/modelo/FotografiaServicio.php
+Linea Error: 191
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(161): FotografiaServicio::extraerEn(NULL, NULL)
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(72): PrincipalControlador::configurar()
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#3 {main}
+**************************** Error n° 17 *****************************
+codigo Error: 17
+Mensaje error: Datos de autenticación incorrectos. Revise su usuario y password
+Archivo Error: /var/www/html/SISGESAC-DESPLIEGUE2017/base/clases/basededatos/Conexion.php
+Linea Error: 67
+Trayecto:
+		#0 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/modelo/LoginServicio.php(50): Conexion::conectar()
+		#1 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(83): LoginServicio::obtenerLogin('admin', 'admin')
+		#2 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/login/LoginControlador.php(54): LoginControlador::iniciarLogin()
+		#3 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/Bloque.php(33): LoginControlador::manejarRequerimiento()
+		#4 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(197): require_once('/var/www/html/S...')
+		#5 /var/www/html/SISGESAC-DESPLIEGUE2017/modulos/principal/PrincipalControlador.php(73): PrincipalControlador::manejarRequerimiento()
+		#6 /var/www/html/SISGESAC-DESPLIEGUE2017/index.php(41): PrincipalControlador::iniciar()
+		#7 {main}
