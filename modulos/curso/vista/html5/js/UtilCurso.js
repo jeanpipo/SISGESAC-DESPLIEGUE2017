@@ -1479,14 +1479,14 @@ function succListarEstudiantesCargarNotas(data){
 				cad += "<input type='hidden' id='nom"+i+"' value='"+est[i]['nombre1']+" "+est[i]['apellido1']+"'>";
 
 				if(est[i]['nota'] == null)
-					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#nota"+i+"\",1,2,false)' onchange='actualizarEstado("+i+")' id='nota"+i+"' size='4' style='width:50px;' value=''></td>";
+					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#nota"+i+"\",1,2,false);actualizarEstatusDeCursoEstudiante(this.value,null)' onchange='actualizarEstado("+i+")' id='nota"+i+"' size='4' style='width:50px;' value=''></td>";
 				else
-					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#nota"+i+"\",1,2,false)' onchange='actualizarEstado("+i+")' id='nota"+i+"'  size='4' style='width:50px;' value='"+est[i]['nota']+"'></td>";
+					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#nota"+i+"\",1,2,false);actualizarEstatusDeCursoEstudiante(this.value,null)' onchange='actualizarEstado("+i+")' id='nota"+i+"'  size='4' style='width:50px;' value='"+est[i]['nota']+"'></td>";
 
 				if(est[i]['por_asistencia'] == null)
-					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#asis"+i+"\",1,3,false)' onchange='actualizarEstado("+i+")' id='asis"+i+"' size='4' style='width:50px;' value=''></td>";
+					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#asis"+i+"\",1,3,false);actualizarEstatusDeCursoEstudiante(null,this.value)' onchange='actualizarEstado("+i+")' id='asis"+i+"' size='4' style='width:50px;' value=''></td>";
 				else
-					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#asis"+i+"\",1,3,false)' onchange='actualizarEstado("+i+")' id='asis"+i+"' size='4' style='width:50px;' value='"+est[i]['por_asistencia']+"'></td>";
+					cad += "<td style='text-align:center'><center><input class='form-control' type='text' onkeyup='validarSoloNumeros(\"#asis"+i+"\",1,3,false);actualizarEstatusDeCursoEstudiante(null,this.value)' onchange='actualizarEstado("+i+")' id='asis"+i+"' size='4' style='width:50px;' value='"+est[i]['por_asistencia']+"'></td>";
 
 				cad += "<td style='text-align:center'><select class='selectpicker' onchange='actualizarEstado("+i+")' data-live-search='true' data-width='200px' id='estado"+i+"'>"+cad2+"</select></td>";
 
@@ -2036,7 +2036,7 @@ function succRetirarUni(data){
 }
 
 
-function actualizarEstatus(nota,asistencia){
+function actualizarEstatusDeCursoEstudiante(nota,asistencia){
 	if(nota < 12)
 		return "R";
 	if(asistencia < 75)
