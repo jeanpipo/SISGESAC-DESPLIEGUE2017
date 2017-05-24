@@ -1304,7 +1304,7 @@ if(obtenerGet('codigo') != null)
 var codDoc = null;
 
 function montarSelectUsuario(){
-	
+
 	datos = datos[0];
 
 	if(datos.emp_inst != null){
@@ -1404,7 +1404,7 @@ function succCargarNotas(data){
 
 		$("#per").html(dat[0]['nombreperiodo']);
 		$("#uni").html(dat[0]['nombreuni']);
-		
+
 		//montarSelects(data);
 		succMontarSelects(data);
 
@@ -1431,7 +1431,7 @@ function succCargarNotas(data){
 function succListarEstudiantesCargarNotas(data){
 	//alert("ajkds");
 	console.log(data);
-	
+
 	var est = data.estudiante;
 	var cad = "";
 	var cad2 = "";
@@ -1440,9 +1440,9 @@ function succListarEstudiantesCargarNotas(data){
 	for(var j = 0; j < edos.length; j++){
 		cad2 += "<option value='"+edos[j]['codigo']+"'>"+edos[j]['nombre']+"</option>";
 	}
-	
+
 	if(est){
-	
+
 		cad += "<table id='table-Est' class='table table-hover table-condensed table-responsive'>";
 
 		cad += "<th style='text-align:center' class='dark'>#</th>";
@@ -1499,7 +1499,7 @@ function succListarEstudiantesCargarNotas(data){
 				cad += "</tr>";
 			}
 		}
-		
+
 		cad += "</table>";
 
 		//alert(datos);
@@ -2033,4 +2033,15 @@ function retirarUni(){
 function succRetirarUni(data){
 	mostrarMensaje(data.mensaje,1);
 	listarUniEstudiante();
+}
+
+
+function actualizarEstatus(nota,asistencia){
+	if(nota < 12)
+		return "R";
+	if(asistencia < 75)
+		return "I";
+	if(asistencia >= 75 && nota >= 12)
+		return "A";
+	return "C";
 }
