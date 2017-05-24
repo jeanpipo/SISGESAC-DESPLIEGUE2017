@@ -491,8 +491,8 @@
 				$contExite=1;
 					$conNoExiste=1;
 				if(!$ruta){		
-					$personasCargadasExito[0]="nombre;apellido;cedula;correo";
-					$personasCargadasFallo[0]="nombre;apellido;cedula;correo";			
+					$personasCargadasExito[0]="Nombre;Apellido;Cédula;Correo";
+					$personasCargadasFallo[0]="Nombre;Apellido;Cédula;Correo";			
 					$archivo=PostGet::obtenerFiles("archivo","name");
 					$a=explode("/", (__DIR__));
 					$path="";

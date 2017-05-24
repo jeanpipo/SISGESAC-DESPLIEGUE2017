@@ -1441,8 +1441,8 @@ function succCargaArchivoNuevoIngreso(data){
 	if(data.contadorExiste>1){
 		$("#tablaNo").remove();
 		var cadena=""
-		cadena+="<div id='tablaNo'> <b> <font color='red'>ESTAS PERSONAS DEBE SER REGISTRADAS MANUALMENTE ";
-		cadena+="EN EL MODULO DE ESTUDIANTES PORQUE YA SE ENCUENTRAN REGISTRAS EN EL SISTEMA </font></b>";
+		cadena+="<div id='tablaNo'> <b> <font color='red'>ESTAS PERSONAS DEBEN SER REGISTRADAS MANUALMENTE ";
+		cadena+="EN EL MÓDULO DE ESTUDIANTES PORQUE YA SE ENCUENTRAN REGISTRADAS EN EL SISTEMA </font></b>";
 		cadena+="<table border='1'>";	
 		var datos=data.personasYaRegistradas;
 		var datosSplit="";
@@ -1491,7 +1491,7 @@ function succCargaArchivoNuevoIngreso(data){
 		$("#limpiarFormulario").show();
 		if(data.contadorExiste>1){
 			$("#noInscritos").show();
-			if(confirm("Te recomendamos que descargues el listados de los estudiantes que deben ser registrados manualmente. \n ¿deseas descargar el listado?")){
+			if(confirm("Te recomendamos que descargues el listado de los estudiantes que deben ser registrados manualmente \n ¿Deseas descargar el listado?")){
 				pdfEstudiantesNuevoIngresoNoInscrito();
 			}
 		}
